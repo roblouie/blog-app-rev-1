@@ -1,0 +1,14 @@
+<header-bar></header-bar>
+<section layout="row" flex>
+     <span ng-animate-ref="article"></span>
+    <side-nav post-view></side-nav>
+    <md-content id="main-listing-background" class="md-padding" flex layout-padding md-scroll-y>
+        <md-card ng-animate-ref="post-card-{{entry.ID}}" class="entry-listing-card" style="max-width: 960px;">
+            <img ng-if="entry.featured_image" ng-src="{{entry.featured_image.source}}" class="md-card-image" alt="image caption">
+            <md-card-content>
+                <h1 class="md-display-2">{{entry.title}}</h1>
+                <span ng-bind-html="entry.content | rawHtml"></span>
+            </md-card-content>
+        </md-card>
+    </md-content>
+</section>

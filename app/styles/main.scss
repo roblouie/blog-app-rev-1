@@ -1,0 +1,281 @@
+$nav-background-color: linear-gradient(to bottom, #7bcde0 0%, #7be3cd 100%); //white;
+$nav-color: white; //rgba(0, 0, 0, 0.87);
+$nav-border-color: white; //black;
+$content-background-color: #ccc;
+
+$entry-listing-max-width: 770px;
+
+h2 {margin:0;}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+}
+
+.header-bar {
+  color: $nav-color;
+  background-color: $nav-background-color;
+  border-bottom: 1px solid gray;
+}
+
+.content-background {
+  background-color: $content-background-color;
+}
+
+.card-style-tile {
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.14),0 2px 2px 0 rgba(0,0,0,.098),0 1px 5px 0 rgba(0,0,0,.084);
+  cursor: pointer;
+  //animation-name: slideup;
+  //transform: translate(0, 2000px);
+}
+
+md-grid-list .card-style-tile md-grid-tile-header {
+  height: initial;
+//  background-color: white;
+//  color: rgba(0,0,0,0.87);
+}
+
+md-grid-list .card-style-tile md-grid-tile-footer {
+  height: initial;
+  background-color: white;
+  color: rgba(0,0,0,0.8);
+  //background-color: rgba(0, 209, 94, 0.89);
+  padding: 10px;
+}
+
+p {
+  font-weight: 400;
+  letter-spacing: 0.010em;
+  line-height: 1.6em;
+}
+
+.selfie {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  display: block;
+  border: 1px solid $nav-border-color;
+  backface-visibility: hidden;
+}
+
+//.facebook-link {
+////  position: fixed;
+////  bottom: 0;
+//  margin-left: 80px;
+//  border-radius: 100%;
+//  border: 1px solid $nav-border-color;
+//}
+
+.site-title {
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  word-spacing: -0.15em;
+  font-weight: 300;
+  /* color: gray; */
+}
+
+.site-title span {
+  font-weight: 800;
+}
+
+.filter-button {
+  text-transform: uppercase;
+  text-align: right;
+  padding: 10px;
+  border-top: 1px solid $nav-border-color;
+}
+
+.last-button {
+  border-bottom: 1px solid $nav-border-color;
+  padding-bottom: 25px;
+}
+
+//@keyframes slideup {
+//  from {
+//    display: none;
+//    transform: translate(0, 100%);
+//  }
+//
+//  to {
+//    display: block;
+//    transform: translate(0, 0);
+//  }
+//}
+
+/* latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Raleway Light'), local('Raleway-Light'), url(http://fonts.gstatic.com/s/raleway/v9/-_Ctzj9b56b8RgXW8FAriQzyDMXhdD8sAj6OAJTFsBI.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), url(http://fonts.gstatic.com/s/raleway/v9/QAUlVt1jXOgQavlW5wEfxQLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Raleway ExtraBold'), local('Raleway-ExtraBold'), url(http://fonts.gstatic.com/s/raleway/v9/1ImRNPx4870-D9a1EBUdPAzyDMXhdD8sAj6OAJTFsBI.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+//.pop {
+//
+//  left: 0;
+//  right: 0;
+//  top: 0;
+//  bottom: 0;
+//}
+//.pop.ng-enter,
+//.pop.ng-leave {
+//  position: absolute;
+//  -webkit-transition: all 1s ease;
+//  transition: all 1s ease;
+//}
+//.pop.ng-enter {
+//  position: absolute;
+//  opacity: 0;
+//}
+//.pop.ng-enter-active,
+//.pop.ng-leave,
+//.pop.ng-leave-active {
+//  left: 0;
+//  position: absolute;
+//  opacity: 1;
+//}
+//.pop.ng-leave-active {}
+
+#left-nav, #left-nav md-content {
+  background: $nav-background-color;
+  color: $nav-color;
+  //transition-duration: 0.3s;
+  //transition-timing-function: initial;
+  //transition-property: all;
+}
+
+.view-animation {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.view-animation.ng-enter {
+  transition:1.0s linear all;
+  position: absolute;
+  opacity:0;
+}
+
+.view-animation.ng-enter.ng-enter-active {
+  position: absolute;
+  opacity:1;
+}
+
+.view-animation.ng-leave {
+  position: absolute;
+  transition:1.0s linear all;
+  opacity:1;
+}
+
+.view-animation.ng-leave.ng-leave-active {
+  position: absolute;
+  opacity:0;
+}
+
+//.facebook-link {
+//  font-size: 10px;
+//}
+//
+//.selfie {
+//  font-size: 40px;
+//}
+//
+//.selfie.ng-anchor-out {
+//  transition: 0.5s linear all;
+//
+//  /* the scale will be applied during the out animation,
+//         but will be animated away when the in animation runs */
+//  transform: scale(1.2);
+//}
+//
+//.selfie.ng-anchor-in {
+//  transition: 1s linear all;
+//}
+//
+//.facebook-link.ng-anchor-out {
+//  transition: 0.5s linear all;
+//
+//  /* the scale will be applied during the out animation,
+//         but will be animated away when the in animation runs */
+//  transform: scale(1.2);
+//}
+//
+//.facebook-link.ng-anchor-in {
+//  transition: 1s linear all;
+//}
+
+.selfie.ng-anchor-out {
+  transform: rotateY( 90deg );
+  transition:0.5s linear all;
+}
+
+.selfie.ng-anchor-in {
+  transition:0.5s linear all;
+}
+
+.facebook-link.ng-anchor-out {
+  transform: rotateY( 90deg );
+  transition:0.5s linear all;
+}
+
+.facebook-link.ng-anchor-in {
+  transition:0.5s linear all;
+}
+
+.facebook-link {
+  background-color: #3b5998;
+  color: white;
+}
+
+.twitter-link {
+  background-color: #4099FF;
+  color: white;
+}
+
+.reddit-link {
+  background-color: #FF4500;
+  color: white;
+}
+
+#share-icon-box {
+  perspective: 1000px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.social-media-icon {
+  width: 45px;
+  height: 45px;
+  padding: 5px;
+  display: block;
+  border-radius: 100%;
+  backface-visibility: hidden;
+  transition: transform 1s;
+}
+

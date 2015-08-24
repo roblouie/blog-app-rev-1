@@ -1,0 +1,75 @@
+<header-bar></header-bar>
+<section layout="row" flex>
+
+    <span ng-animate-ref="somethingelse"></span>
+    <side-nav></side-nav>
+<!--GRID LIST LAYOUT-->
+<!--<md-content id="main-listing-background" class="md-padding" flex layout-padding>-->
+    <!--<md-grid-list md-cols-sm="1" md-cols-gt-sm="1" md-cols-md="3" md-cols-gt-md="3" md-cols-lg="3" md-cols-gt-lg="4" md-cols-gt-xl="6" md-row-height-gt-md="1:1" md-row-height="1:1" md-gutter="12px" md-gutter-gt-sm="8px">-->
+        <!--<md-grid-tile ng-click="remove()" ng-repeat="entry in content" md-rowspan="{{entry.rowspan}}" md-colspan="{{entry.colspan}}" md-rowspan-sm="1" md-colspan-sm="1" class="card-style-tile">-->
+            <!--<a href="/#/article/{{entry.ID}}/{{entry.title | titleUrl}}">-->
+                <!--<md-grid-tile-header>-->
+                <!--<img ng-if="entry.featured_image" ng-src="{{entry.featured_image.source}}" class="md-card-image" alt="image caption" style="width:100%;">-->
+                <!--</md-grid-tile-header>-->
+                <!--<md-grid-tile-footer>-->
+                        <!--<h2 class="md-title">{{entry.title}}</h2>-->
+                        <!--<p ng-if="entry.colspan >= 2" ng-bind-html="entry.excerpt | rawHtml"></p>-->
+                    <!--</md-grid-tile-footer>-->
+            <!--</a>-->
+        <!--</md-grid-tile>-->
+    <!--</md-grid-list>-->
+<!--</md-content>-->
+
+
+
+    <md-content layout="column" class="content-background" style="padding: 10px;">
+
+        <!--SINGLE COLUMN LAYOUT-->
+        <!--<md-card ng-repeat="entry in content" class="entry-listing-card">-->
+            <!--<img ng-if="entry.featured_image" ng-src="{{entry.featured_image.source}}" class="md-card-image" alt="image caption">-->
+            <!--<md-card-content>-->
+                <!--<span ng-if="$mdMedia('gt-md')"><h2>{{entry.title}}</h2>  </span>-->
+                <!--{{$mdMedia('gt-md') }}-->
+                <!--<span ng-bind-html="entry.excerpt | rawHtml"></span>-->
+            <!--</md-card-content>-->
+        <!--</md-card>-->
+
+        <!--MULTIPLE COLUMN LAYOUT-->
+        <div layout="row" layout-wrap layout-fill class="content-background">
+            <div flex="33" class="article-column">
+                    <md-card ng-repeat="entry in content" ng-if="$index == 0 || $index == 3 || $index == 6" class="entry-listing-card">
+                        <a href="/#/article/{{entry.ID}}/{{entry.title | titleUrl}}">
+                            <img ng-if="entry.featured_image" ng-src="{{entry.featured_image.source}}" class="md-card-image" alt="image caption">
+                            <md-card-content>
+                                <span ng-if="$mdMedia('gt-md')"><h2>{{entry.title}}</h2>  </span>
+                                {{$mdMedia('gt-md') }}
+                                <span ng-bind-html="entry.excerpt | rawHtml"></span>
+                            </md-card-content>
+                        </a>
+                    </md-card>
+            </div>
+
+            <div flex="33" class="article-column">
+                <md-card ng-repeat="entry in content" ng-if="$index == 1 || $index == 4 || $index == 7" class="entry-listing-card">
+                    <img ng-if="entry.featured_image" ng-src="{{entry.featured_image.source}}" class="md-card-image" alt="image caption">
+                    <md-card-content>
+                        <span ng-if="$mdMedia('gt-md')"><h2>{{entry.title}}</h2>  </span>
+                        {{$mdMedia('gt-md') }}
+                        <span ng-bind-html="entry.excerpt | rawHtml"></span>
+                    </md-card-content>
+                </md-card>
+            </div>
+
+            <div flex="33" class="article-column">
+                <md-card ng-repeat="entry in content" ng-if="$index == 2 || $index == 5 || $index == 8" class="entry-listing-card">
+                    <img ng-if="entry.featured_image" ng-src="{{entry.featured_image.source}}" class="md-card-image" alt="image caption">
+                    <md-card-content>
+                        <span ng-if="$mdMedia('gt-md')"><h2>{{entry.title}}</h2>  </span>
+                        {{$mdMedia('gt-md') }}
+                        <span ng-bind-html="entry.excerpt | rawHtml"></span>
+                    </md-card-content>
+                </md-card>
+            </div>
+        </div>
+    </md-content>
+</section>
