@@ -1,7 +1,12 @@
-$nav-background-color: linear-gradient(to bottom, #7bcde0 0%, #7be3cd 100%); //white;
+$nav-background-color: linear-gradient(to bottom, #46A6BC 0%, #3DC2A6 100%);
+$header-bar-background-color: linear-gradient(to right, #46A6BC 0%, #3DC2A6 100%);
 $nav-color: white; //rgba(0, 0, 0, 0.87);
 $nav-border-color: white; //black;
 $content-background-color: #ccc;
+
+$reddit-color: #FF4500;
+$facebook-color: #3b5998;
+$twitter-color: #4099FF;
 
 $entry-listing-max-width: 770px;
 
@@ -18,7 +23,7 @@ body {
 
 .header-bar {
   color: $nav-color;
-  background-color: $nav-background-color;
+  background: $header-bar-background-color;
   border-bottom: 1px solid gray;
 }
 
@@ -61,14 +66,6 @@ p {
   border: 1px solid $nav-border-color;
   backface-visibility: hidden;
 }
-
-//.facebook-link {
-////  position: fixed;
-////  bottom: 0;
-//  margin-left: 80px;
-//  border-radius: 100%;
-//  border: 1px solid $nav-border-color;
-//}
 
 .site-title {
   text-transform: uppercase;
@@ -133,38 +130,17 @@ p {
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 
-//.pop {
-//
-//  left: 0;
-//  right: 0;
-//  top: 0;
-//  bottom: 0;
-//}
-//.pop.ng-enter,
-//.pop.ng-leave {
-//  position: absolute;
-//  -webkit-transition: all 1s ease;
-//  transition: all 1s ease;
-//}
-//.pop.ng-enter {
-//  position: absolute;
-//  opacity: 0;
-//}
-//.pop.ng-enter-active,
-//.pop.ng-leave,
-//.pop.ng-leave-active {
-//  left: 0;
-//  position: absolute;
-//  opacity: 1;
-//}
-//.pop.ng-leave-active {}
-
-#left-nav, #left-nav md-content {
+#left-nav {
   background: $nav-background-color;
   color: $nav-color;
-  //transition-duration: 0.3s;
-  //transition-timing-function: initial;
-  //transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: initial;
+  transition-property: all;
+}
+
+#left-nav md-content {
+  background-color: transparent;
+  color: $nav-color;
 }
 
 .view-animation {
@@ -175,7 +151,7 @@ p {
 }
 
 .view-animation.ng-enter {
-  transition:1.0s linear all;
+  transition: 0.4s linear all;
   position: absolute;
   opacity:0;
 }
@@ -187,7 +163,7 @@ p {
 
 .view-animation.ng-leave {
   position: absolute;
-  transition:1.0s linear all;
+  transition: 0.4s linear all;
   opacity:1;
 }
 
@@ -196,68 +172,33 @@ p {
   opacity:0;
 }
 
-//.facebook-link {
-//  font-size: 10px;
-//}
-//
-//.selfie {
-//  font-size: 40px;
-//}
-//
-//.selfie.ng-anchor-out {
-//  transition: 0.5s linear all;
-//
-//  /* the scale will be applied during the out animation,
-//         but will be animated away when the in animation runs */
-//  transform: scale(1.2);
-//}
-//
-//.selfie.ng-anchor-in {
-//  transition: 1s linear all;
-//}
-//
-//.facebook-link.ng-anchor-out {
-//  transition: 0.5s linear all;
-//
-//  /* the scale will be applied during the out animation,
-//         but will be animated away when the in animation runs */
-//  transform: scale(1.2);
-//}
-//
-//.facebook-link.ng-anchor-in {
-//  transition: 1s linear all;
-//}
-
 .selfie.ng-anchor-out {
   transform: rotateY( 90deg );
-  transition:0.5s linear all;
+  transition:0.2s linear all;
 }
 
 .selfie.ng-anchor-in {
-  transition:0.5s linear all;
+  transition:0.2s linear all;
 }
 
 .facebook-link.ng-anchor-out {
   transform: rotateY( 90deg );
-  transition:0.5s linear all;
+  transition:0.2s linear all;
 }
 
 .facebook-link.ng-anchor-in {
-  transition:0.5s linear all;
+  transition:0.2s linear all;
 }
 
 .facebook-link {
-  background-color: #3b5998;
   color: white;
 }
 
 .twitter-link {
-  background-color: #4099FF;
   color: white;
 }
 
 .reddit-link {
-  background-color: #FF4500;
   color: white;
 }
 
@@ -275,7 +216,6 @@ p {
   padding: 5px;
   display: block;
   border-radius: 100%;
+  color: white;
   backface-visibility: hidden;
-  transition: transform 1s;
 }
-
