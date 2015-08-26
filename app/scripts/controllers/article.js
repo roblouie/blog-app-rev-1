@@ -1,11 +1,15 @@
 'use strict';
 
 angular.module('blogApp')
-  .controller('ArticleCtrl', function ($scope, DataService, $routeParams, $mdUtil, $mdSidenav, $log) {
+  .controller('ArticleCtrl', function ($scope, DataPrepService, $routeParams, $mdUtil, $mdSidenav, $log) {
         $scope.toggleLeft = buildToggler('left');
-        DataService.getEntry($routeParams.id).then(function(response) {
-        $scope.entry = response.data;
-    });
+
+        $scope.entry = DataPrepService.data;
+
+        angular.element(document).ready(function () {
+            Prism.highlightAll();
+        });
+
 
         function buildToggler(navID) {
             var debounceFn =  $mdUtil.debounce(function(){

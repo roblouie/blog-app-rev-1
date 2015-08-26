@@ -15,6 +15,7 @@
     <!-- endbuild -->
     <!-- build:css({.tmp,app}) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/libraries/prism.css">
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
     <!-- endbuild -->
   </head>
@@ -57,19 +58,18 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.js"></script>
+    <script src="scripts/libraries/prism.js"></script>
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/services/data-service.js"></script>
-        <script src="scripts/filters/raw-html.js"></script>
-        <script src="scripts/controllers/article.js"></script>
-        <script src="scripts/filters/title-url.js"></script>
-        <script src="scripts/filters/scaled-image-path.js"></script>
-        <script src="scripts/directives/header-bar.js"></script>
-        <script src="scripts/directives/side-nav.js"></script>
-        <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/services/data-service.js"></script>
+    <script src="scripts/filters/raw-html.js"></script>
+    <script src="scripts/controllers/article.js"></script>
+    <script src="scripts/filters/title-url.js"></script>
+    <script src="scripts/filters/scaled-image-path.js"></script>
+    <script src="scripts/directives/header-bar.js"></script>
+    <script src="scripts/directives/side-nav.js"></script>
+    <!-- endbuild -->
 </body>
 </html>
