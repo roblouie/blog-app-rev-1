@@ -8,11 +8,19 @@ $reddit-color: #FF4500;
 $facebook-color: #3b5998;
 $twitter-color: #4099FF;
 
-$entry-listing-max-width: 770px;
+$article-max-width: 1000px;
 
 h2 {
   font-family: 'Raleway', sans-serif;
   margin:0;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+strong {
+  font-weight: 600;
 }
 
 .container {
@@ -31,7 +39,7 @@ h2 {
 }
 
 .entry-listing-card {
-  box-shadow: 0 0 4px rgba(0,0,0,0.2);
+  box-shadow: none;
   margin-bottom: 16px;
 }
 
@@ -40,13 +48,16 @@ h2 {
   color: inherit;
 }
 
+h1.article-headline {
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
 h3.md-display-1 {
-  margin: 0 0 1em;
+  margin: 0 0 0;
   text-rendering: optimizelegibility;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 18px;
-  font-weight: 700;
+  letter-spacing: 3px;
   line-height: 1.4;
 }
 
@@ -72,17 +83,19 @@ md-grid-list .card-style-tile md-grid-tile-footer {
 }
 
 p {
-  font-weight: 400;
-  letter-spacing: 0.010em;
+  letter-spacing: 0.040em;
   line-height: 1.6em;
 }
 
 .selfie {
   width: 150px;
   height: 150px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 100%;
   display: block;
-  border: 1px solid $nav-border-color;
+  border: 3px solid $nav-border-color;
   backface-visibility: hidden;
 }
 
@@ -112,42 +125,30 @@ p {
   padding-bottom: 25px;
 }
 
-//@keyframes slideup {
-//  from {
-//    display: none;
-//    transform: translate(0, 100%);
-//  }
-//
-//  to {
-//    display: block;
-//    transform: translate(0, 0);
-//  }
+///* latin */
+//@font-face {
+//  font-family: 'Raleway';
+//  font-style: normal;
+//  font-weight: 300;
+//  src: local('Raleway Light'), local('Raleway-Light'), url(http://fonts.gstatic.com/s/raleway/v9/-_Ctzj9b56b8RgXW8FAriQzyDMXhdD8sAj6OAJTFsBI.woff2) format('woff2');
+//  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 //}
-
-/* latin */
-@font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Raleway Light'), local('Raleway-Light'), url(http://fonts.gstatic.com/s/raleway/v9/-_Ctzj9b56b8RgXW8FAriQzyDMXhdD8sAj6OAJTFsBI.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-}
-/* latin */
-@font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Raleway'), url(http://fonts.gstatic.com/s/raleway/v9/QAUlVt1jXOgQavlW5wEfxQLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-}
-/* latin */
-@font-face {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 800;
-  src: local('Raleway ExtraBold'), local('Raleway-ExtraBold'), url(http://fonts.gstatic.com/s/raleway/v9/1ImRNPx4870-D9a1EBUdPAzyDMXhdD8sAj6OAJTFsBI.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-}
+///* latin */
+//@font-face {
+//  font-family: 'Raleway';
+//  font-style: normal;
+//  font-weight: 400;
+//  src: local('Raleway'), url(http://fonts.gstatic.com/s/raleway/v9/QAUlVt1jXOgQavlW5wEfxQLUuEpTyoUstqEm5AMlJo4.woff2) format('woff2');
+//  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+//}
+///* latin */
+//@font-face {
+//  font-family: 'Raleway';
+//  font-style: normal;
+//  font-weight: 800;
+//  src: local('Raleway ExtraBold'), local('Raleway-ExtraBold'), url(http://fonts.gstatic.com/s/raleway/v9/1ImRNPx4870-D9a1EBUdPAzyDMXhdD8sAj6OAJTFsBI.woff2) format('woff2');
+//  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+//}
 
 #left-nav {
   background: $nav-background-color;
@@ -233,7 +234,7 @@ md-sidenav#left-nav.md-locked-open {
   color: white;
 }
 
-#share-icon-box {
+.side-nav-bottom {
   perspective: 1000px;
   position: absolute;
   bottom: 0;
@@ -249,4 +250,34 @@ md-sidenav#left-nav.md-locked-open {
   border-radius: 100%;
   color: white;
   backface-visibility: hidden;
+}
+
+.contact-info {
+  text-align: center;
+}
+
+.contact-info a {
+  color: white;
+}
+
+@media (min-width: 2000px) {
+  [layout="row"] > [flex-gt-xl="25"] {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+.article-card {
+  max-width: $article-max-width;
+}
+
+.article-date {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  color: gray;
+}
+
+#article-content h3 {
+  letter-spacing: 1px;
+  margin: 30px 0 0 0;
 }

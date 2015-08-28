@@ -2,27 +2,29 @@
 
 angular.module('blogApp')
   .controller('MainCtrl', function ($scope, $timeout, $mdSidenav, $mdUtil, $log, DataService, $mdMedia) {
-                $scope.toggleLeft = buildToggler('left');
+        $scope.toggleLeft = buildToggler('left');
         $scope.$mdMedia = $mdMedia;
 
         var numberOfColumns = 1;
         var rawData;
-        if ($mdMedia('gt-lg')) numberOfColumns = 3;
+        if ($mdMedia('gt-xl')) numberOfColumns = 4;
+        if ($mdMedia('(min-width: 1200px) and (max-width: 2000px')) numberOfColumns = 3;
         if ($mdMedia('md') || $mdMedia('lg')) numberOfColumns = 2;
         if ($mdMedia('sm')) numberOfColumns = 1;
-
-        //$('.grid').isotope({
-        //    // options
-        //    itemSelector: '.grid-item',
-        //    layoutMode: 'fitRows'
-        //});
 
         DataService.getPaginatedEntries(10, 1).then(function(response) {
                     rawData = response.data;
                     $scope.content = rowize(rawData, numberOfColumns);
                 });
 
-        $scope.$watch(function() { return $mdMedia('gt-lg'); }, function(isLargest) {
+        $scope.$watch(function() { return $mdMedia('gt-xl')}, function (isExtraLargest) {
+            if (rawData !== undefined && isExtraLargest) {
+                numberOfColumns = 4;
+                $scope.content = rowize(rawData, numberOfColumns);
+            }
+        });
+
+        $scope.$watch(function() { return $mdMedia('(min-width: 1200px) and (max-width: 2000px'); }, function(isLargest) {
             if (rawData !== undefined && isLargest) {
                 numberOfColumns = 3;
                 $scope.content = rowize(rawData, numberOfColumns);

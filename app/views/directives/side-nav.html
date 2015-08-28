@@ -12,11 +12,15 @@
         <p class="filter-button"></p>
 
     </md-content>
-        <div id="share-icon-box" layout="row" layout-align="center">
-            <img ng-if="!postView" class="selfie" src="images/selfie.jpg" ng-animate-ref="linkA"/>
 
-            <md-icon ng-if="postView" class="facebook-link social-media-icon" md-svg-src="images/icons/facebook.svg" aria-label="facebook" ng-animate-ref="linkA"></md-icon>
-            <md-icon ng-if="postView" class="reddit-link social-media-icon" md-svg-src="images/icons/reddit.svg" aria-label="reddit"></md-icon>
-            <md-icon ng-if="postView" class="twitter-link social-media-icon" md-svg-src="images/icons/twitter.svg" aria-label="twitter"></md-icon>
+        <div id="share-icon-box" ng-if="postView" layout="row" layout-align="center" class="side-nav-bottom">
+            <md-icon class="facebook-link social-media-icon" md-svg-src="images/icons/facebook.svg" aria-label="facebook" ng-animate-ref="linkA"></md-icon>
+            <md-icon class="reddit-link social-media-icon" md-svg-src="images/icons/reddit.svg" aria-label="reddit"></md-icon>
+            <md-icon class="twitter-link social-media-icon" md-svg-src="images/icons/twitter.svg" aria-label="twitter"></md-icon>
+        </div>
+
+        <div id="selfie-box" ng-if="!postView" layout-align="center" class="side-nav-bottom">
+            <img class="selfie" src="images/selfie.jpg" ng-animate-ref="linkA"/>
+            <div class="contact-info"><a href="mailto:rob.j.louie@gmail.com">rob.j.louie@gmail.com</a></div>
         </div>
 </md-sidenav>
