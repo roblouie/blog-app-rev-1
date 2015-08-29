@@ -17,11 +17,8 @@ angular.module('blogApp')
         //    layoutMode: 'fitRows'
         //});
 
-        DataService.getPaginatedEntries(3, 1).then(function(response) {
+        DataService.getPaginatedEntries(10, 1).then(function(response) {
                     rawData = response.data;
-                rawData.push({ID: '100', title: 'Heres a title'});
-            rawData.push({ID: '101', title: 'Heres a title'});
-            rawData.push({ID: '102', title: 'Heres a title'});
                     $scope.content = rowize(rawData, numberOfColumns);
                 });
 

@@ -1,8 +1,8 @@
-$nav-background-color: linear-gradient(to bottom, #46A6BC 0%, #3DC2A6 100%);
-$header-bar-background-color: linear-gradient(to right, #46A6BC 0%, #3DC2A6 100%);
+$nav-background-color: linear-gradient(to bottom, #46A6BC 0%, #41C997 100%);
+$header-bar-background-color: linear-gradient(to right, #46A6BC 0%, #41C997 100%);
 $nav-color: white; //rgba(0, 0, 0, 0.87);
 $nav-border-color: white; //black;
-$content-background-color: #ccc;
+$content-background-color: #e3e3e3;
 
 $reddit-color: #FF4500;
 $facebook-color: #3b5998;
@@ -10,10 +10,9 @@ $twitter-color: #4099FF;
 
 $entry-listing-max-width: 770px;
 
-h2 {margin:0;}
-
-body {
+h2 {
   font-family: 'Raleway', sans-serif;
+  margin:0;
 }
 
 .container {
@@ -29,6 +28,26 @@ body {
 
 .content-background {
   background-color: $content-background-color;
+}
+
+.entry-listing-card {
+  box-shadow: 0 0 4px rgba(0,0,0,0.2);
+  margin-bottom: 16px;
+}
+
+.article-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+h3.md-display-1 {
+  margin: 0 0 1em;
+  text-rendering: optimizelegibility;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
 }
 
 .card-style-tile {
@@ -138,10 +157,22 @@ p {
   transition-property: all;
 }
 
+md-sidenav#left-nav.md-locked-open {
+  width: 256px;
+  min-width: 256px;
+  max-width: 256px;
+}
+
 #left-nav md-content {
   background-color: transparent;
   color: $nav-color;
 }
+
+//#left-nav, #left-nav.md-locked-open-add-active, #left-nav.md-locked-open {
+//  width: 256px;
+//  min-width: 256px;
+//  max-width: 256px;
+//}
 
 .view-animation {
   top: 0;

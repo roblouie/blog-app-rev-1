@@ -18,7 +18,14 @@ angular
       })
       .when('/article/:id/:title', {
         templateUrl: 'views/article.html',
-        controller: 'ArticleCtrl'
+        controller: 'ArticleCtrl',
+        resolve: {
+            DataPrepService: ['$route', 'DataService',
+                function($route, DataService) {
+
+                    return DataService.getEntry($route.current.params.id);
+                }]
+        }
       })
       .otherwise({
         redirectTo: '/'
