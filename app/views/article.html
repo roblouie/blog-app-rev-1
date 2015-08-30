@@ -1,10 +1,10 @@
 <header-bar></header-bar>
 <section layout="row" flex>
-     <span ng-animate-ref="article"></span>
+    <span ng-animate-ref="article"></span>
     <side-nav post-view></side-nav>
     <md-content id="main-listing-background" class="md-padding" flex layout-padding md-scroll-y>
-        <md-card class="entry-listing-card article-card">
-            <img ng-animate-ref="post-card-{{entry.ID}}" ng-if="entry.featured_image" ng-src="{{entry.featured_image.source}}" class="md-card-image" alt="image caption">
+        <md-card class="article-card">
+            <img ng-if="entry.featured_image" ng-src="{{entry.featured_image.source}}" class="md-card-image" alt="image caption">
             <md-card-content>
                 <h1 class="article-headline md-display-2">{{entry.title}}</h1>
                 <div id="article-content" ng-bind-html="entry.content | rawHtml"></div>

@@ -23,6 +23,25 @@ strong {
   font-weight: 600;
 }
 
+md-icon {
+  color: inherit;
+}
+
+#side-nav-close-button {
+  width: 280px;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+#side-nav-top-content {
+  overflow-x: hidden;
+}
+
+#side-nav-close-button md-icon, .menu-icon {
+  width: 30px;
+  height: 30px;
+}
+
 .container {
   height: 100%;
   width: 100%;
@@ -43,7 +62,7 @@ strong {
   margin-bottom: 16px;
 }
 
-.article-link {
+.non-decorated-link {
   text-decoration: none;
   color: inherit;
 }
@@ -57,7 +76,8 @@ h3.md-display-1 {
   margin: 0 0 0;
   text-rendering: optimizelegibility;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
+  font-size: 31px;
   line-height: 1.4;
 }
 
@@ -88,15 +108,25 @@ p {
 }
 
 .selfie {
+  position: absolute;
+  margin-left: 50px;
   width: 150px;
   height: 150px;
-  margin-bottom: 10px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 20px;
   border-radius: 100%;
   display: block;
   border: 3px solid $nav-border-color;
-  backface-visibility: hidden;
+  background-image: url('../images/selfie.jpg');
+  background-size: cover;
+}
+
+#selfie-box {
+  overflow: hidden;
+  height: 180px;
+}
+
+#share-icon-box {
+  overflow: hidden;
 }
 
 .site-title {
@@ -159,6 +189,7 @@ p {
 }
 
 md-sidenav#left-nav.md-locked-open {
+  overflow: hidden;
   width: 256px;
   min-width: 256px;
   max-width: 256px;
@@ -205,11 +236,23 @@ md-sidenav#left-nav.md-locked-open {
 }
 
 .selfie.ng-anchor-out {
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
   transform: rotateY( 90deg );
   transition:0.2s linear all;
 }
 
 .selfie.ng-anchor-in {
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 0;
+  margin-left: auto;
+  margin-right: auto;
+  color: transparent;
+  background-image: url('../images/selfie.jpg');
+  background-size: cover;
   transition:0.2s linear all;
 }
 
@@ -219,6 +262,37 @@ md-sidenav#left-nav.md-locked-open {
 }
 
 .facebook-link.ng-anchor-in {
+  background-image: url('../images/icons/facebook_white.svg');
+  background-size: cover;
+  color: white;
+  transition:0.2s linear all;
+}
+
+.twitter-link.ng-anchor-out {
+  position: absolute;
+  left: 0;
+  transform: rotateY( 90deg );
+  transition:0.2s linear all;
+}
+
+.twitter-link.ng-anchor-in {
+  position: absolute;
+  left: 0;
+  background-image: url('../images/icons/facebook_white.svg');
+  background-size: cover;
+  color: white;
+  transition:0.2s linear all;
+}
+
+.reddit-link.ng-anchor-out {
+  transform: rotateY( 90deg );
+  transition:0.2s linear all;
+}
+
+.reddit-link.ng-anchor-in {
+  background-image: url('../images/icons/facebook_white.svg');
+  background-size: cover;
+  color: white;
   transition:0.2s linear all;
 }
 
@@ -239,7 +313,7 @@ md-sidenav#left-nav.md-locked-open {
   position: absolute;
   bottom: 0;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .social-media-icon {
@@ -253,6 +327,9 @@ md-sidenav#left-nav.md-locked-open {
 }
 
 .contact-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   text-align: center;
 }
 
@@ -267,7 +344,20 @@ md-sidenav#left-nav.md-locked-open {
   }
 }
 
+@media (max-width: 600px) {
+  .entry-listing-card {
+    margin: 8px 0 25px 0;
+  }
+}
+
+@media (max-width: 960px) {
+  .site-title {
+    margin-top: 0;
+  }
+}
+
 .article-card {
+  box-shadow: none;
   max-width: $article-max-width;
 }
 
@@ -279,5 +369,10 @@ md-sidenav#left-nav.md-locked-open {
 
 #article-content h3 {
   letter-spacing: 1px;
-  margin: 30px 0 0 0;
+  margin: 40px 0 0 0;
 }
+
+.article-summary p {
+  margin-bottom: 0;
+}
+
