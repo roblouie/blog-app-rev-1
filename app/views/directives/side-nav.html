@@ -1,11 +1,11 @@
 <md-sidenav id="left-nav" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
-    <md-content layout-padding ng-controller="LeftCtrl">
+    <md-content id="side-nav-top-content" layout-padding ng-controller="LeftCtrl">
 
-        <md-button ng-click="close()" class="md-primary" hide-gt-md>
-            Close Sidenav Left
+        <md-button id="side-nav-close-button" hide-gt-md aria-label="Close" ng-click="close()">
+            <md-icon md-svg-icon="images/icons/close.svg"></md-icon>
         </md-button>
 
-        <h2 class="md-display-1 site-title">Rob<span>Louie</span></h2>
+        <a href="#/" class="non-decorated-link"><h2 class="md-display-1 site-title">Rob<span>Louie</span></h2></a>
 
         <p class="filter-button">Coding</p>
         <p class="filter-button">Life</p>
@@ -15,12 +15,14 @@
 
         <div id="share-icon-box" ng-if="postView" layout="row" layout-align="center" class="side-nav-bottom">
             <md-icon class="facebook-link social-media-icon" md-svg-src="images/icons/facebook.svg" aria-label="facebook" ng-animate-ref="linkA"></md-icon>
-            <md-icon class="reddit-link social-media-icon" md-svg-src="images/icons/reddit.svg" aria-label="reddit"></md-icon>
-            <md-icon class="twitter-link social-media-icon" md-svg-src="images/icons/twitter.svg" aria-label="twitter"></md-icon>
+            <md-icon class="reddit-link social-media-icon" md-svg-src="images/icons/reddit.svg" aria-label="reddit" ng-animate-ref="linkB"></md-icon>
+            <md-icon class="twitter-link social-media-icon" md-svg-src="images/icons/twitter.svg" aria-label="twitter" ng-animate-ref="linkC"></md-icon>
         </div>
 
         <div id="selfie-box" ng-if="!postView" layout-align="center" class="side-nav-bottom">
-            <img class="selfie" src="images/selfie.jpg" ng-animate-ref="linkA"/>
+            <div hide-md hide-sm class="selfie" ng-animate-ref="linkA"></div>
+            <div hide-md hide-sm class="selfie" ng-animate-ref="linkB"></div>
+            <div hide-md hide-sm class="selfie" ng-animate-ref="linkC"></div>
             <div class="contact-info"><a href="mailto:rob.j.louie@gmail.com">rob.j.louie@gmail.com</a></div>
         </div>
 </md-sidenav>

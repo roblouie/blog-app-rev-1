@@ -1,26 +1,30 @@
 'use strict';
 
 angular.module('blogApp')
-  .controller('MainCtrl', function ($scope, $timeout, $mdSidenav, $mdUtil, $log, DataService, $mdMedia) {
+  .controller('MainCtrl', function ($scope, $timeout, $mdSidenav, $mdUtil, $log, DataService, DataPrepService, ColumnSize, $mdMedia) {
         $scope.toggleLeft = buildToggler('left');
         $scope.$mdMedia = $mdMedia;
 
-        var numberOfColumns = 1;
+        var numberOfColumns = ColumnSize;
         var rawData;
-        if ($mdMedia('gt-xl')) numberOfColumns = 4;
-        if ($mdMedia('(min-width: 1200px) and (max-width: 2000px')) numberOfColumns = 3;
-        if ($mdMedia('md') || $mdMedia('lg')) numberOfColumns = 2;
-        if ($mdMedia('sm')) numberOfColumns = 1;
+        //if ($mdMedia('gt-xl')) numberOfColumns = 4;
+        //if ($mdMedia('(min-width: 1200px) and (max-width: 2000px')) numberOfColumns = 3;
+        //if ($mdMedia('md') || $mdMedia('lg')) numberOfColumns = 2;
+        //if ($mdMedia('sm')) numberOfColumns = 1;
 
-        DataService.getPaginatedEntries(10, 1).then(function(response) {
-                    rawData = response.data;
-                    $scope.content = rowize(rawData, numberOfColumns);
-                });
+        rawData = DataPrepService.data;
+        $scope.content = rowize(rawData, numberOfColumns);
+
+        //DataService.getPaginatedEntries(10, 1).then(function(response) {
+        //            rawData = response.data;
+        //            $scope.content = rowize(rawData, numberOfColumns);
+        //        });
 
         $scope.$watch(function() { return $mdMedia('gt-xl')}, function (isExtraLargest) {
             if (rawData !== undefined && isExtraLargest) {
                 numberOfColumns = 4;
                 $scope.content = rowize(rawData, numberOfColumns);
+
             }
         });
 
@@ -38,7 +42,7 @@ angular.module('blogApp')
             }
         });
 
-        $scope.$watch(function() { return $mdMedia('gt-sm'); }, function(isMedium) {
+        $scope.$watch(function() { return $mdMedia('md'); }, function(isMedium) {
             if (rawData !== undefined && isMedium) {
                 numberOfColumns = 2;
                 $scope.content = rowize(rawData, numberOfColumns);
