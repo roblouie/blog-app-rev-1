@@ -3,10 +3,11 @@
     <span ng-animate-ref="article"></span>
     <side-nav post-view></side-nav>
     <md-content id="main-listing-background" class="md-padding" flex layout-padding md-scroll-y>
-        <md-card class="article-card">
+        <md-card class="article-card" ng-animate-ref="article-card-{{entry.ID}}">
             <img ng-if="entry.featured_image" ng-src="{{entry.featured_image.source}}" class="md-card-image" alt="image caption">
             <md-card-content>
                 <h1 class="article-headline md-display-2">{{entry.title}}</h1>
+                <div class="article-date">{{entry.date | date : 'longDate'}}</div>
                 <div id="article-content" ng-bind-html="entry.content | rawHtml"></div>
             </md-card-content>
         </md-card>
