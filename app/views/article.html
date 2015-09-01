@@ -1,7 +1,6 @@
-<header-bar></header-bar>
-<section layout="row" flex>
-    <span ng-animate-ref="article"></span>
-    <side-nav post-view></side-nav>
+
+
+
     <md-content id="main-listing-background" class="md-padding" flex layout-padding md-scroll-y>
         <md-card class="article-card" ng-animate-ref="article-card-{{entry.ID}}">
             <img ng-if="entry.featured_image" ng-src="{{entry.featured_image.source}}" class="md-card-image" alt="image caption">
@@ -12,4 +11,3 @@
             </md-card-content>
         </md-card>
     </md-content>
-</section>

@@ -2,7 +2,7 @@ $nav-background-color: linear-gradient(to bottom, #46A6BC 0%, #41C997 100%);
 $header-bar-background-color: linear-gradient(to right, #46A6BC 0%, #41C997 100%);
 $nav-color: white; //rgba(0, 0, 0, 0.87);
 $nav-border-color: white; //black;
-$content-background-color: #e3e3e3;
+$content-background-color: #e7e7e7;
 
 $reddit-color: #FF4500;
 $facebook-color: #3b5998;
@@ -59,7 +59,9 @@ md-icon {
 
 .entry-listing-card {
   box-shadow: none;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
+  margin-right: 16px;
+  margin-left: 16px;
 }
 
 .non-decorated-link {
@@ -74,11 +76,12 @@ h1.article-headline {
 }
 
 h3.md-display-1 {
+  font-weight: 600;
   margin: 0 0 0;
   text-rendering: optimizelegibility;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 31px;
+  font-size: 21px;
   line-height: 1.4;
 }
 
@@ -208,32 +211,39 @@ md-sidenav#left-nav.md-locked-open {
 //}
 
 .view-animation {
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  width: 100%;
 }
 
 .view-animation.ng-enter {
   transition: 0.4s linear all;
   position: absolute;
+  height: 100%;
   opacity:0;
 }
 
 .view-animation.ng-enter.ng-enter-active {
   position: absolute;
+  height: 100%;
   opacity:1;
 }
 
 .view-animation.ng-leave {
   position: absolute;
+  height: 100%;
   transition: 0.4s linear all;
   opacity:1;
 }
 
 .view-animation.ng-leave.ng-leave-active {
   position: absolute;
+  height: 100%;
   opacity:0;
+}
+
+@media (min-width: 960px) {
+  .view-animation.ng-leave, .view-animation.ng-enter, .view-animation.ng-enter.ng-enter-active, .view-animation.ng-leave.ng-leave-active {
+    width: calc(100% - 256px);
+  }
 }
 
 .selfie.ng-anchor-out {
@@ -241,39 +251,35 @@ md-sidenav#left-nav.md-locked-open {
   margin-right: auto;
   color: white;
   transform: rotateY( 90deg );
-  transition:0.2s linear all;
+  transition:0.3s linear all;
 }
 
 .selfie.ng-anchor-in {
-  position: absolute;
-  left: 0;
-  width: 0;
-  height: 0;
   margin-left: auto;
   margin-right: auto;
   color: transparent;
   background-image: url('../images/selfie.jpg');
   background-size: cover;
-  transition:0.2s linear all;
+  transition:0.3s linear all;
 }
 
 .facebook-link.ng-anchor-out {
   transform: rotateY( 90deg );
-  transition:0.2s linear all;
+  transition:0.3s linear all;
 }
 
 .facebook-link.ng-anchor-in {
   background-image: url('../images/icons/facebook_white.svg');
   background-size: cover;
   color: white;
-  transition:0.2s linear all;
+  transition:0.3s linear all;
 }
 
 .twitter-link.ng-anchor-out {
   position: absolute;
   left: 0;
   transform: rotateY( 90deg );
-  transition:0.2s linear all;
+  transition:0.3s linear all;
 }
 
 .twitter-link.ng-anchor-in {
@@ -282,19 +288,19 @@ md-sidenav#left-nav.md-locked-open {
   background-image: url('../images/icons/facebook_white.svg');
   background-size: cover;
   color: white;
-  transition:0.2s linear all;
+  transition:0.3s linear all;
 }
 
 .reddit-link.ng-anchor-out {
   transform: rotateY( 90deg );
-  transition:0.2s linear all;
+  transition:0.3s linear all;
 }
 
 .reddit-link.ng-anchor-in {
   background-image: url('../images/icons/facebook_white.svg');
   background-size: cover;
   color: white;
-  transition:0.2s linear all;
+  transition:0.3s linear all;
 }
 
 .facebook-link {
@@ -364,7 +370,6 @@ md-sidenav#left-nav.md-locked-open {
 
 .article-date {
   margin-top: 5px;
-//  margin-bottom: 20px;
   color: gray;
 }
 
@@ -382,27 +387,22 @@ md-sidenav#left-nav.md-locked-open {
   margin-bottom: 0;
 }
 
-.article-card.ng-anchor-in {
-  transition: 0.3s linear all;
-}
-
-.article-card.ng-anchor-out {
-  overflow: hidden;
-  transition: 0.3s linear all;
-}
-
-.entry-listing-card.ng-anchor-in > md-card-content > #article-content {
-  transition: 0.3s linear all;
-  margin-top: 0;
-  max-height: 40px;
-  overflow: hidden;
+.entry-listing-card.ng-anchor-out {
+  transform: scale(0.9);
+  transition: 0.5s linear all;
 }
 
 .entry-listing-card.ng-anchor-in {
-  transition: 0.3s linear all;
+  transform: scale(1.03);
+  transition: 0.5s linear all;
 }
 
-.entry-listing-card.ng-anchor-out {
-  transition: 0.3s linear all;
+.header-wrapper.ng-anchor-out {
+  transition: 0.5s linear all;
 }
+
+.header-wrapper.ng-anchor-in {
+  transition: 0.5s linear all;
+}
+
 
