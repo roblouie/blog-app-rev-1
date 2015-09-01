@@ -70,6 +70,7 @@ md-icon {
 h1.article-headline {
   text-transform: uppercase;
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 h3.md-display-1 {
@@ -363,7 +364,7 @@ md-sidenav#left-nav.md-locked-open {
 
 .article-date {
   margin-top: 5px;
-  margin-bottom: 20px;
+//  margin-bottom: 20px;
   color: gray;
 }
 
@@ -372,7 +373,36 @@ md-sidenav#left-nav.md-locked-open {
   margin: 40px 0 0 0;
 }
 
+#article-content {
+  margin-top: 40px;
+}
+
 .article-summary p {
+  margin-top: 20px;
   margin-bottom: 0;
+}
+
+.article-card.ng-anchor-in {
+  transition: 0.3s linear all;
+}
+
+.article-card.ng-anchor-out {
+  overflow: hidden;
+  transition: 0.3s linear all;
+}
+
+.entry-listing-card.ng-anchor-in > md-card-content > #article-content {
+  transition: 0.3s linear all;
+  margin-top: 0;
+  max-height: 40px;
+  overflow: hidden;
+}
+
+.entry-listing-card.ng-anchor-in {
+  transition: 0.3s linear all;
+}
+
+.entry-listing-card.ng-anchor-out {
+  transition: 0.3s linear all;
 }
 
