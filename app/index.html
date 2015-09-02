@@ -27,7 +27,7 @@
     <!-- Add your site or application content here -->
     <div layout="column" style="height: 100%">
     <header-bar></header-bar>
-    <section layout="row" flex>
+    <section layout="row" flex style="position: relative;">
 
         <span ng-animate-ref="somethingelse"></span>
         <side-nav></side-nav>
@@ -54,6 +54,10 @@
 
     <!-- font testing -->
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,800,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,900,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic' rel='stylesheet' type='text/css'>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -83,6 +87,7 @@
     <script src="scripts/directives/side-nav.js"></script>
     <script src="scripts/controllers/code.js"></script>
     <script src="scripts/controllers/left.js"></script>
+    <script src="scripts/directives/article-content.js"></script>
     <!-- endbuild -->
 </body>
 </html>
