@@ -8,15 +8,23 @@ $reddit-color: #FF4500;
 $facebook-color: #3b5998;
 $twitter-color: #4099FF;
 
-$article-max-width: 1000px;
+$article-max-width: 750px;
 
-h2 {
+h1, h2, h3, h4, h5, h6, .filter-button, .article-date {
   font-family: 'Raleway', sans-serif;
-  margin:0;
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Lora', serif;
+  text-rendering: optimizelegibility;
+}
+
+pre {
+  text-rendering: auto;
+}
+
+h2 {
+  margin:0;
 }
 
 strong {
@@ -58,10 +66,10 @@ md-icon {
 }
 
 .entry-listing-card {
-  box-shadow: none;
-  margin-bottom: 32px;
-  margin-right: 16px;
-  margin-left: 16px;
+//  box-shadow: none;
+  margin-bottom: 16px;
+//  margin-right: 16px;
+//  margin-left: 16px;
 }
 
 .non-decorated-link {
@@ -78,7 +86,6 @@ h1.article-headline {
 h3.md-display-1 {
   font-weight: 600;
   margin: 0 0 0;
-  text-rendering: optimizelegibility;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 21px;
@@ -107,8 +114,8 @@ md-grid-list .card-style-tile md-grid-tile-footer {
 }
 
 p {
-  letter-spacing: 0.040em;
-  line-height: 1.6em;
+  letter-spacing: 0.020em;
+  line-height: 29px;
 }
 
 .selfie {
@@ -203,12 +210,6 @@ md-sidenav#left-nav.md-locked-open {
   background-color: transparent;
   color: $nav-color;
 }
-
-//#left-nav, #left-nav.md-locked-open-add-active, #left-nav.md-locked-open {
-//  width: 256px;
-//  min-width: 256px;
-//  max-width: 256px;
-//}
 
 .view-animation {
   width: 100%;
@@ -352,8 +353,22 @@ md-sidenav#left-nav.md-locked-open {
 }
 
 @media (max-width: 600px) {
+  body {
+    text-rendering: auto;
+  }
+
   .entry-listing-card {
     margin: 8px 0 25px 0;
+  }
+
+  p {
+    letter-spacing: 0.020em;
+    line-height: 28px;
+    font-size: 15px;
+  }
+
+  .article-card-content {
+    padding: 0;
   }
 }
 
@@ -383,26 +398,27 @@ md-sidenav#left-nav.md-locked-open {
 }
 
 .article-summary p {
+  font-size: 15px;
   margin-top: 20px;
   margin-bottom: 0;
 }
 
 .entry-listing-card.ng-anchor-out {
   transform: scale(0.9);
-  transition: 0.5s linear all;
+  transition: 0.4s linear all;
 }
 
 .entry-listing-card.ng-anchor-in {
   transform: scale(1.03);
-  transition: 0.5s linear all;
+  transition: 0.4s linear all;
 }
 
 .header-wrapper.ng-anchor-out {
-  transition: 0.5s linear all;
+  transition: 0.4s linear all;
 }
 
 .header-wrapper.ng-anchor-in {
-  transition: 0.5s linear all;
+  transition: 0.4s linear all;
 }
 
 

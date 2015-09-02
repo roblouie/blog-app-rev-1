@@ -1,7 +1,14 @@
 'use strict';
 
+/**
+ * @ngdoc function
+ * @name blogApp.controller:CodeCtrl
+ * @description
+ * # CodeCtrl
+ * Controller of the blogApp
+ */
 angular.module('blogApp')
-  .controller('MainCtrl', function ($scope, $timeout, $mdSidenav, $mdUtil, $log, DataService, DataPrepService, ColumnSize, $mdMedia) {
+  .controller('CodeCtrl', function ($scope, $timeout, $mdSidenav, $mdUtil, $log, DataService, DataPrepService, ColumnSize, $mdMedia) {
         $scope.toggleLeft = buildToggler('left');
         $scope.$mdMedia = $mdMedia;
 
@@ -63,15 +70,15 @@ angular.module('blogApp')
             }
         });
 
-                $scope.remove = function() {
-                    $scope.content.splice(0,1);
-                };
+        $scope.remove = function() {
+            $scope.content.splice(0,1);
+        };
 
-                //setInterval(function () {
-                //    DataService.getPaginatedEntries(3, 1).then(function(response) {
-                //        $scope.content.push(response.data[0]);
-                //    });
-                //}, 3000);
+        //setInterval(function () {
+        //    DataService.getPaginatedEntries(3, 1).then(function(response) {
+        //        $scope.content.push(response.data[0]);
+        //    });
+        //}, 3000);
 
 
 
@@ -83,24 +90,27 @@ angular.module('blogApp')
 
             for (var i=0; i<arr.length; i++) {
                 var rowId = i % size;
+                newArr[rowId] = newArr[rowId] || [];
                 newArr[rowId].push(arr[i]);
             }
+
+
             return newArr;
         }
 
 
-                /**
-                 * Build handler to open/close a SideNav; when animation finishes
-                 * report completion in console
-                 */
-                function buildToggler(navID) {
-                    var debounceFn =  $mdUtil.debounce(function(){
-                        $mdSidenav(navID)
-                            .toggle()
-                            .then(function () {
-                                $log.debug("toggle " + navID + " is done");
-                            });
-                    },200);
-                    return debounceFn;
-                }
-            });
+        /**
+         * Build handler to open/close a SideNav; when animation finishes
+         * report completion in console
+         */
+        function buildToggler(navID) {
+            var debounceFn =  $mdUtil.debounce(function(){
+                $mdSidenav(navID)
+                    .toggle()
+                    .then(function () {
+                        $log.debug("toggle " + navID + " is done");
+                    });
+            },200);
+            return debounceFn;
+        }
+  });
