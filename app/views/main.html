@@ -7,7 +7,7 @@
                         <img ng-if="entry.featured_image" ng-src="{{entry.featured_image.source}}" class="md-card-image" alt="image caption">
                     </a>
                     <md-card-content>
-                        <a href="/#/article/{{entry.ID}}/{{entry.title | titleUrl}}" class="non-decorated-link">
+                        <a href="/#!/article/{{entry.ID}}/{{entry.title | titleUrl}}" class="non-decorated-link">
                             <h3 class="md-display-1">{{entry.title}}</h3>
                         </a>
                         <div class="article-date">{{entry.date | date : 'longDate'}}</div>
