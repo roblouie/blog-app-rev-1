@@ -10,20 +10,14 @@
         <a href="#!/" class="non-decorated-link"><p class="filter-button">Home</p></a>
         <a href="#!/code" class="non-decorated-link"><p class="filter-button">Coding</p></a>
         <a href="#!/life" class="non-decorated-link"><p class="filter-button">Life</p></a>
-        <p class="filter-button"></p>
+        <a href="#!/about" class="non-decorated-link"><p class="filter-button">About</p></a>
 
     </md-content>
 
-        <div id="share-icon-box" ng-if="postView" layout="row" layout-align="center" class="side-nav-bottom">
+        <div id="share-icon-box" layout="row" layout-align="center" class="side-nav-bottom">
             <md-icon class="facebook-link social-media-icon" md-svg-src="images/icons/facebook.svg" aria-label="facebook"></md-icon>
-            <md-icon class="reddit-link social-media-icon" md-svg-src="images/icons/reddit.svg" aria-label="reddit"></md-icon>
+            <md-icon class="linkedin-link social-media-icon" md-svg-src="images/icons/linkedin_white.svg" aria-label="linkedin"></md-icon>
+            <!--<md-icon class="reddit-link social-media-icon" md-svg-src="images/icons/reddit.svg" aria-label="reddit"></md-icon>-->
             <md-icon class="twitter-link social-media-icon" md-svg-src="images/icons/twitter.svg" aria-label="twitter"></md-icon>
-        </div>
-
-        <div id="selfie-box" ng-if="!postView" layout-align="center" class="side-nav-bottom">
-            <div hide-md hide-sm class="selfie"></div>
-            <div hide-md hide-sm class="selfie"></div>
-            <div hide-md hide-sm class="selfie"></div>
-            <div class="contact-info"><a href="mailto:rob.j.louie@gmail.com">rob.j.louie@gmail.com</a></div>
         </div>
 </md-sidenav>

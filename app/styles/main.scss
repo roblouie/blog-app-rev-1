@@ -155,10 +155,14 @@ p {
 }
 
 .filter-button {
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 0;
   text-transform: uppercase;
   text-align: right;
-  padding: 10px;
-  border-top: 1px solid $nav-border-color;
+  padding: 20px 0 20px 0;
+  font-size: 22px;
+  letter-spacing: 3px;
 }
 
 .last-button {
@@ -446,3 +450,24 @@ md-sidenav#left-nav.md-locked-open {
   max-width: $article-max-width;
 }
 //End comment section
+
+.category-icon-wrapper {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  top: -30px;
+  left: 0;
+  text-align: center;
+}
+
+.category-icon {
+  color: white;
+  background-color: red;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+md-card-content {
+  position: relative;
+}

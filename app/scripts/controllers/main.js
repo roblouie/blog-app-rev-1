@@ -13,8 +13,13 @@ angular.module('blogApp')
         //if ($mdMedia('sm')) numberOfColumns = 1;
 
         rawData = DataPrepService.data;
+
+
+
         $scope.content = rowize(rawData, numberOfColumns);
         $scope.flexSize = $scope.content.length;
+
+
 
         //DataService.getPaginatedEntries(10, 1).then(function(response) {
         //            rawData = response.data;
