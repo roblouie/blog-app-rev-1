@@ -9,6 +9,10 @@
                 <div class="article-date">{{entry.date | date : 'longDate'}}</div>
                 <!--<div id="article-content" ng-bind-html="entry.content | rawHtml"></div>-->
                 <div id="article-content" article-content html="entry.content"></div>
+                <disqus-comments disqus-shortname="roblouie"
+                            disqus-identifier="{{ entry.ID }}"
+                            disqus-url="http://www.roblouie.com/#!/article/{{entry.ID}}/{{entry.title | titleUrl}}">
+                </disqus-comments>
             </md-card-content>
         </md-card>
     </md-content>

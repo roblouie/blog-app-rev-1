@@ -14,7 +14,8 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,app}) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
+      <script type="text/javascript" src="http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script>
+      <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/libraries/prism.css">
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
     <!-- endbuild -->
@@ -32,7 +33,7 @@
         <span ng-animate-ref="somethingelse"></span>
         <side-nav></side-nav>
 
-        <md-content layout="column" class="content-background view-animation" ng-view="">
+        <md-content layout="column" class="content-background view-animation" ng-view=""></md-content>
     </section>
     </div>
 
@@ -74,6 +75,7 @@
     <!-- endbuild -->
 
     <script src="scripts/libraries/prism.js"></script>
+    <script type="text/javascript" src="http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script>
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
@@ -88,6 +90,8 @@
     <script src="scripts/controllers/code.js"></script>
     <script src="scripts/controllers/left.js"></script>
     <script src="scripts/directives/article-content.js"></script>
+    <script src="scripts/directives/livefyre-comments.js"></script>
+    <script src="scripts/directives/disqus-comments.js"></script>
     <!-- endbuild -->
 </body>
 </html>
