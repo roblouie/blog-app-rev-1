@@ -1,7 +1,7 @@
 <div ng-repeat="column in content" flex="flexSize">
     <md-card ng-repeat="entry in column" class="entry-listing-card" ng-animate-ref="listing-{{entry.ID}}">
-        <a href="/#/article/{{entry.ID}}/{{entry.slug}}" class="non-decorated-link">
-            <img ng-if="entry.featured_image" ng-src="{{entry.featured_image.attachment_meta.sizes.large ? entry.featured_image.attachment_meta.sizes.large.url : entry.featured_image.source}}" class="md-card-image" alt="image caption">
+        <a href="/#!/article/{{entry.ID}}/{{entry.slug}}" class="non-decorated-link">
+            <img ng-if="entry.featured_image" ng-src="{{entry.featured_image.attachment_meta.sizes.medium ? entry.featured_image.attachment_meta.sizes.medium.url : entry.featured_image.source}}" class="md-card-image" alt="image caption">
         </a>
 
         <md-card-content>
