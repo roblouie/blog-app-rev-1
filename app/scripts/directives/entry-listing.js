@@ -15,7 +15,7 @@ angular.module('blogApp')
         scope: {
             rawData: '='
         },
-      link: function postLink(scope, element, attrs) {
+      link: function postLink(scope) {
           var rawData = scope.rawData;
           var numberOfColumns;
 
