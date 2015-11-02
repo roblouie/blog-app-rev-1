@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name blogApp.controller:CodeCtrl
+ * @name blogApp.controller:LifeCtrl
  * @description
- * # CodeCtrl
+ * # LifeCtrl
  * Controller of the blogApp
  */
 angular.module('blogApp')
-  .controller('CodeCtrl', function (DataPrepService) {
+  .controller('LifeCtrl', function (DataPrepService) {
         this.rawData = DataPrepService.data;
   });

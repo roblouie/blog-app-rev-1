@@ -1,21 +1,5 @@
-<span ng-animate-ref="fix-code"></span>
-<md-content flex layout="column" class="content-background" style="padding: 10px; height: 100%;">
-<div layout="row" layout-wrap layout-fill class="content-background">
-            <div ng-repeat="column in content" flex="flexSize">
-                <md-card ng-repeat="entry in column" class="entry-listing-card" ng-animate-ref="listing-{{entry.ID}}">
-                    <a href="/#/article/{{entry.ID}}/{{entry.title | titleUrl}}" class="non-decorated-link">
-                        <img ng-if="entry.featured_image" ng-src="{{entry.featured_image.source}}" class="md-card-image">
-                    </a>
-                    <md-card-content>
-                        <a href="/#/article/{{entry.ID}}/{{entry.title | titleUrl}}" class="non-decorated-link">
-                            <h3 class="md-display-1">{{entry.title}}</h3>
-                        </a>
-                        <div class="article-date">{{entry.date | date : 'longDate'}}</div>
-                        <div ng-bind-html="entry.excerpt | rawHtml" class="article-summary"></div>
-                    </md-card-content>
-                </md-card>
-
-            </div>
-    </div>
-</md-content>
+<span ng-animate-ref="fix-main"></span>
+<div layout="row" layout-wrap layout-fill class="content-background" style="padding:10px">
+    <entry-listing raw-data="code.rawData"></entry-listing>
+</div>
 

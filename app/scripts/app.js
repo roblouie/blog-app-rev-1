@@ -16,20 +16,11 @@ angular
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
+        controllerAs: 'main',
         resolve: {
             DataPrepService: ['DataService',
                 function(DataService) {
                     return DataService.getPaginatedEntries(10, 1);
-                }],
-            ColumnSize: ['$mdMedia',
-                function($mdMedia) {
-                    var numberOfColumns = 1;
-                    if ($mdMedia('gt-xl')) numberOfColumns = 4;
-                    if ($mdMedia('(min-width: 1200px) and (max-width: 2000px')) numberOfColumns = 3;
-                    if ($mdMedia('md') || $mdMedia('lg')) numberOfColumns = 2;
-                    if ($mdMedia('sm')) numberOfColumns = 1;
-
-                    return numberOfColumns;
                 }]
         }
       })
@@ -46,24 +37,29 @@ angular
         .when('/code', {
             templateUrl: 'views/code.html',
             controller: 'CodeCtrl',
+            controllerAs: 'code',
             resolve: {
                 DataPrepService: ['DataService',
                     function(DataService) {
                         return DataService.getCodeEntries(10, 1);
-                    }],
-                ColumnSize: ['$mdMedia',
-                    function($mdMedia) {
-                        var numberOfColumns = 1;
-                        if ($mdMedia('gt-xl')) numberOfColumns = 4;
-                        if ($mdMedia('(min-width: 1200px) and (max-width: 2000px')) numberOfColumns = 3;
-                        if ($mdMedia('md') || $mdMedia('lg')) numberOfColumns = 2;
-                        if ($mdMedia('sm')) numberOfColumns = 1;
-
-                        return numberOfColumns;
                     }]
             }
         })
+      .when('/life', {
+        templateUrl: 'views/life.html',
+        controller: 'LifeCtrl',
+        controllerAs: 'life',
+        resolve: {
+            DataPrepService: ['DataService',
+                function(DataService) {
+                    return DataService.getLifeEntries(10, 1);
+                }]
+        }
+      })
       .otherwise({
         redirectTo: '/'
       });
+
+
   });
+
