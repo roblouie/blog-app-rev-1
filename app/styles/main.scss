@@ -66,10 +66,7 @@ md-icon {
 }
 
 .entry-listing-card {
-//  box-shadow: none;
-  margin-bottom: 16px;
-//  margin-right: 16px;
-//  margin-left: 16px;
+  margin: 16px 16px 32px 16px;
 }
 
 .non-decorated-link {
@@ -88,7 +85,7 @@ h3.md-display-1 {
   margin: 0 0 0;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 21px;
+  font-size: 25px;
   line-height: 1.4;
 }
 
@@ -358,6 +355,12 @@ md-sidenav#left-nav.md-locked-open {
   [layout="row"] > [flex-gt-xl="25"] {
     flex: 0 0 25%;
     max-width: 25%;
+  }
+}
+
+@media (max-width: 1080px) {
+  .entry-listing-card {
+    margin: 8px 8px 16px 8px;
   }
 }
 
