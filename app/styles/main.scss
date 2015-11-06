@@ -41,6 +41,16 @@ md-icon {
   margin-bottom: 20px;
 }
 
+a {
+  color: #46A6BC;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.featured-image {
+  max-width: 1000px;
+}
+
 #side-nav-top-content {
   overflow-x: hidden;
 }
@@ -400,8 +410,11 @@ md-sidenav#left-nav.md-locked-open {
 }
 
 .article-card {
-  h1, h2, h3, h4, h5, p, figure {
+  h2, h3, h4, h5, p, figure, .article-date {
     max-width: $article-max-width;
+  }
+  h1 {
+    max-width: 1000px;
   }
 }
 

@@ -19,15 +19,15 @@ angular.module('blogApp')
           var rawData = scope.rawData;
           var numberOfColumns;
 
-          scope.$watch(function() { return $mdMedia('min-width: 2300px'); }, function(isLargest) {
-              if (rawData !== undefined && isLargest) {
-                  numberOfColumns = 4;
-                  scope.content = rowize(rawData, numberOfColumns);
-                  scope.flexSize = scope.content.length;
-              }
-          });
+          //scope.$watch(function() { return $mdMedia('min-width: 2600px'); }, function(isLargest) {
+          //    if (rawData !== undefined && isLargest) {
+          //        numberOfColumns = 4;
+          //        scope.content = rowize(rawData, numberOfColumns);
+          //        scope.flexSize = scope.content.length;
+          //    }
+          //});
 
-          scope.$watch(function() { return $mdMedia('(min-width: 1600px) and (max-width: 2300px)'); }, function(isLarge) {
+          scope.$watch(function() { return $mdMedia('(min-width: 1600px) and (max-width: 2600px)'); }, function(isLarge) {
               if (rawData !== undefined && isLarge) {
                   numberOfColumns = 3;
                   scope.content = rowize(rawData, numberOfColumns);
@@ -35,7 +35,7 @@ angular.module('blogApp')
               }
           });
 
-          scope.$watch(function() { return $mdMedia('(min-width: 900px) and (max-width: 1600px)'); }, function(isMedium) {
+          scope.$watch(function() { return $mdMedia('(min-width: 800px) and (max-width: 1600px)'); }, function(isMedium) {
               if (rawData !== undefined && isMedium) {
                   numberOfColumns = 2;
                   scope.content = rowize(rawData, numberOfColumns);
@@ -44,7 +44,7 @@ angular.module('blogApp')
 
           });
 
-          scope.$watch(function() { return $mdMedia('max-width: 900px'); }, function(isSmallest) {
+          scope.$watch(function() { return $mdMedia('max-width: 800px'); }, function(isSmallest) {
               if (rawData !== undefined && isSmallest) {
                   numberOfColumns = 1;
                   scope.content = rowize(rawData, numberOfColumns);
