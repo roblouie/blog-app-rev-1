@@ -113,6 +113,11 @@ md-grid-list .card-style-tile md-grid-tile-footer {
 p {
   letter-spacing: 0.020em;
   line-height: 29px;
+  font-size: 16px;
+}
+
+code[class*="language-"], pre[class*="language-"] {
+  font-size: 14px;
 }
 
 .selfie {
@@ -376,7 +381,6 @@ md-sidenav#left-nav.md-locked-open {
   p {
     letter-spacing: 0.020em;
     line-height: 28px;
-    font-size: 15px;
   }
 
   .article-card-content {
