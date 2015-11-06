@@ -66,10 +66,7 @@ md-icon {
 }
 
 .entry-listing-card {
-//  box-shadow: none;
-  margin-bottom: 16px;
-//  margin-right: 16px;
-//  margin-left: 16px;
+  margin: 16px 16px 32px 16px;
 }
 
 .non-decorated-link {
@@ -88,7 +85,7 @@ h3.md-display-1 {
   margin: 0 0 0;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 21px;
+  font-size: 25px;
   line-height: 1.4;
 }
 
@@ -116,6 +113,11 @@ md-grid-list .card-style-tile md-grid-tile-footer {
 p {
   letter-spacing: 0.020em;
   line-height: 29px;
+  font-size: 16px;
+}
+
+code[class*="language-"], pre[class*="language-"] {
+  font-size: 14px;
 }
 
 .selfie {
@@ -361,6 +363,12 @@ md-sidenav#left-nav.md-locked-open {
   }
 }
 
+@media (max-width: 1080px) {
+  .entry-listing-card {
+    margin: 8px 8px 16px 8px;
+  }
+}
+
 @media (max-width: 600px) {
   body {
     text-rendering: auto;
@@ -373,7 +381,6 @@ md-sidenav#left-nav.md-locked-open {
   p {
     letter-spacing: 0.020em;
     line-height: 28px;
-    font-size: 15px;
   }
 
   .article-card-content {

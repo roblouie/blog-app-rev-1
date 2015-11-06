@@ -7,11 +7,10 @@
             <md-card-content class="article-card-content">
                 <h1 class="article-headline md-display-2">{{entry.title}}</h1>
                 <div class="article-date">{{entry.date | date : 'longDate'}}</div>
-                <!--<div id="article-content" ng-bind-html="entry.content | rawHtml"></div>-->
                 <div id="article-content" article-content html="entry.content"></div>
                 <disqus-comments disqus-shortname="roblouie"
                             disqus-identifier="{{ entry.ID }}"
-                            disqus-url="http://www.roblouie.com/#!/article/{{entry.ID}}/{{entry.title | titleUrl}}">
+                            disqus-url="http://www.roblouie.com/#!/article/{{entry.ID}}/{{entry.slug}}">
                 </disqus-comments>
             </md-card-content>
         </md-card>
