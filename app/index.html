@@ -20,21 +20,17 @@
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="blogApp" style="overflow: hidden;">
+  <body ng-app="blogApp" class="layout-row">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div layout="column" style="height: 100%">
-    <header-bar></header-bar>
-    <section layout="row" flex>
-
+    <side-nav></side-nav>
+    <div class="layout-column flex">
+      <header-bar></header-bar>
         <span ng-animate-ref="somethingelse"></span>
-        <side-nav></side-nav>
-
-        <md-content layout="column" class="content-background view-animation" ng-view=""></md-content>
-    </section>
+        <md-content layout="column" class="content-background view-animation" ng-view="" style="padding:10px;"></md-content>
     </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
