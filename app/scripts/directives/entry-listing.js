@@ -61,6 +61,8 @@ angular.module('blogApp')
           });
 
 
+
+
           function rowize(arr, size) {
               var newArr = [];
               for (var i=0; i<size; i++) {
