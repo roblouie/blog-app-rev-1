@@ -251,63 +251,6 @@ md-sidenav#left-nav.md-locked-open {
   }
 }
 
-.selfie.ng-anchor-out {
-  margin-left: auto;
-  margin-right: auto;
-  color: white;
-  transform: rotateY( 90deg );
-  transition:0.3s linear all;
-}
-
-.selfie.ng-anchor-in {
-  margin-left: auto;
-  margin-right: auto;
-  color: transparent;
-  background-image: url('../images/selfie.jpg');
-  background-size: cover;
-  transition:0.3s linear all;
-}
-
-.facebook-link.ng-anchor-out {
-  transform: rotateY( 90deg );
-  transition:0.3s linear all;
-}
-
-.facebook-link.ng-anchor-in {
-  background-image: url('../images/icons/facebook_white.svg');
-  background-size: cover;
-  color: white;
-  transition:0.3s linear all;
-}
-
-.twitter-link.ng-anchor-out {
-  position: absolute;
-  left: 0;
-  transform: rotateY( 90deg );
-  transition:0.3s linear all;
-}
-
-.twitter-link.ng-anchor-in {
-  position: absolute;
-  left: 0;
-  background-image: url('../images/icons/facebook_white.svg');
-  background-size: cover;
-  color: white;
-  transition:0.3s linear all;
-}
-
-.reddit-link.ng-anchor-out {
-  transform: rotateY( 90deg );
-  transition:0.3s linear all;
-}
-
-.reddit-link.ng-anchor-in {
-  background-image: url('../images/icons/facebook_white.svg');
-  background-size: cover;
-  color: white;
-  transition:0.3s linear all;
-}
-
 .facebook-link {
   color: white;
 }

@@ -18,12 +18,14 @@ angular.module('blogApp')
       link: function postLink(scope) {
           var rawData = scope.rawData;
           var numberOfColumns;
+          scope.threeColumnData = rowize(rawData, 3);
+          scope.twoColumnData = rowize(rawData, 2);
+          scope.oneColumnData = rowize(rawData, 1);
 
           scope.$watch(function() { return $mdMedia('(min-width: 2100px)')}, function (isExtraLargest) {
               if (rawData !== undefined && isExtraLargest) {
                   numberOfColumns = 5;
                   scope.content = rowize(rawData, numberOfColumns);
-                  scope.flexSize = scope.content.length;
               }
           });
 
@@ -31,32 +33,32 @@ angular.module('blogApp')
               if (rawData !== undefined && isLargest) {
                   numberOfColumns = 4;
                   scope.content = rowize(rawData, numberOfColumns);
-                  scope.flexSize = scope.content.length;
               }
           });
 
           scope.$watch(function() { return $mdMedia('(min-width: 1100px) and (max-width: 1600px)'); }, function(isLarge) {
               if (rawData !== undefined && isLarge) {
                   numberOfColumns = 3;
-                  scope.content = rowize(rawData, numberOfColumns);
-                  scope.flexSize = scope.content.length;
+                  scope.show3 = true;
+                  scope.show2 = false;
+                  scope.show1 = false;
               }
           });
 
           scope.$watch(function() { return $mdMedia('(min-width: 600px) and (max-width: 1100px)'); }, function(isMedium) {
               if (rawData !== undefined && isMedium) {
-                  numberOfColumns = 2;
-                  scope.content = rowize(rawData, numberOfColumns);
-                  scope.flexSize = scope.content.length;
+                  scope.show3 = false;
+                  scope.show2 = true;
+                  scope.show1 = false;
               }
 
           });
 
           scope.$watch(function() { return $mdMedia('sm'); }, function(isSmallest) {
               if (rawData !== undefined && isSmallest) {
-                  numberOfColumns = 1;
-                  scope.content = rowize(rawData, numberOfColumns);
-                  scope.flexSize = scope.content.length;
+                  scope.show3 = false;
+                  scope.show2 = false;
+                  scope.show1 = true;
               }
           });
 
