@@ -12,7 +12,7 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,app}) styles/main.css -->
-      <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/libraries/prism.css">
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
     <!-- endbuild -->
@@ -26,13 +26,15 @@
     <side-nav></side-nav>
     <div class="layout-column flex" role="main">
       <header-bar></header-bar>
-        <md-content layout="column" class="layout-padding flex view-animation" ng-view="" style="padding:10px;"></md-content>
+        <md-content layout="column" class="flex view-animation" ng-view=""></md-content>
     </div>
 
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
+
+    <script src="scripts/libraries/prism.js"></script>
 
     <!-- font testing -->
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,800,600' rel='stylesheet' type='text/css'>
