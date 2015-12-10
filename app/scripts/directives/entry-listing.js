@@ -18,6 +18,9 @@ angular.module('blogApp')
       link: function postLink(scope) {
           var rawData = scope.rawData;
           var numberOfColumns;
+          scope.oneColumnData = [];
+          scope.twoColumnData = [];
+          scope.threeColumnData = [];
 
           //scope.$watch(function() { return $mdMedia('min-width: 2600px'); }, function(isLargest) {
           //    if (rawData !== undefined && isLargest) {
@@ -27,30 +30,35 @@ angular.module('blogApp')
           //    }
           //});
 
-          scope.$watch(function() { return $mdMedia('(min-width: 1600px) and (max-width: 2600px)'); }, function(isLarge) {
+          scope.$watch(function() { return $mdMedia('(min-width: 1400px) and (max-width: 2600px)'); }, function(isLarge) {
               if (rawData !== undefined && isLarge) {
                   numberOfColumns = 3;
-                  scope.content = rowize(rawData, numberOfColumns);
-                  scope.flexSize = scope.content.length;
+                  scope.threeColumnData = rowize(rawData, numberOfColumns);
+                  scope.twoColumnData = [];
+                  scope.oneColumnData = [];
               }
           });
 
-          scope.$watch(function() { return $mdMedia('(min-width: 800px) and (max-width: 1600px)'); }, function(isMedium) {
+          scope.$watch(function() { return $mdMedia('(min-width: 600px) and (max-width: 1400px)'); }, function(isMedium) {
               if (rawData !== undefined && isMedium) {
                   numberOfColumns = 2;
-                  scope.content = rowize(rawData, numberOfColumns);
-                  scope.flexSize = scope.content.length;
+                  scope.threeColumnData = [];
+                  scope.twoColumnData = rowize(rawData, numberOfColumns);
+                  scope.oneColumnData = [];
               }
 
           });
 
-          scope.$watch(function() { return $mdMedia('max-width: 800px'); }, function(isSmallest) {
+          scope.$watch(function() { return $mdMedia('max-width: 600px'); }, function(isSmallest) {
               if (rawData !== undefined && isSmallest) {
                   numberOfColumns = 1;
-                  scope.content = rowize(rawData, numberOfColumns);
-                  scope.flexSize = scope.content.length;
+                  scope.threeColumnData = [];
+                  scope.twoColumnData = [];
+                  scope.oneColumnData = rowize(rawData, numberOfColumns);
               }
           });
+
+
 
 
           function rowize(arr, size) {

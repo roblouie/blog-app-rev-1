@@ -7,7 +7,6 @@ angular
         'ngSanitize',
         'ngRoute',
         'ngMaterial',
-        'ui.router',
         'ngAnimate'
     ])
     .config(function ($routeProvider, $locationProvider) {

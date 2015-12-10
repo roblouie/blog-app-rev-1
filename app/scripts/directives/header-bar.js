@@ -5,6 +5,7 @@ angular.module('blogApp')
     return {
       templateUrl: '../../views/directives/header-bar.html',
       restrict: 'E',
+      replace: true,
       link: function postLink(scope, element, attrs) {
         scope.toggleLeft = buildToggler('left');
 
