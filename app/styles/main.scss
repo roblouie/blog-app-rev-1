@@ -47,6 +47,10 @@ a {
   font-weight: bold;
 }
 
+figcaption {
+  color: gray;
+}
+
 .featured-image {
   max-width: 1000px;
 }
@@ -76,6 +80,7 @@ a {
 }
 
 .entry-listing-card {
+//  box-shadow: none;
   margin: 16px 16px 32px 16px;
 }
 
