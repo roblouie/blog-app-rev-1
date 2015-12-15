@@ -1,15 +1,15 @@
 <md-sidenav id="left-nav" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
-    <md-content id="side-nav-top-content" layout-padding ng-controller="LeftCtrl">
+    <md-content id="side-nav-top-content" ng-controller="LeftCtrl">
 
         <md-button id="side-nav-close-button" hide-gt-md aria-label="Close" ng-click="close()">
             <md-icon md-svg-icon="images/icons/close.svg"></md-icon>
         </md-button>
 
-        <a href="#!/" class="non-decorated-link"><h2 class="md-display-1 site-title">Rob<span>Louie</span></h2></a>
+        <a href="#!/" class="non-decorated-link site-title-link"><h2 class="md-display-1 site-title">Rob<span>Louie</span></h2></a>
 
-        <a href="#!/" class="non-decorated-link"><p class="filter-button">Home</p></a>
-        <a href="#!/code" class="non-decorated-link"><p class="filter-button">Coding</p></a>
-        <a href="#!/life" class="non-decorated-link"><p class="filter-button">Life</p></a>
+        <a ng-click="close()" href="#!/" class="non-decorated-link filter-button">Home</a>
+        <a ng-click="close()" href="#!/code" class="non-decorated-link filter-button">Coding</a>
+        <a ng-click="close()" href="#!/life" class="non-decorated-link filter-button">Life</a>
         <!-- TODO: Add about section -->
         <!--<a href="#!/about" class="non-decorated-link"><p class="filter-button">About</p></a>-->
 

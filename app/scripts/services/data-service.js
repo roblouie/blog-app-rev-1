@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('blogApp')
-    .factory('DataService', function DataService($http) {
+    .factory('DataService', function DataService($http, loadingSpinnerService) {
         return {
             getPaginatedEntries: getPaginatedEntries,
             getLifeEntries: getLifeEntries,
@@ -10,18 +10,22 @@ angular.module('blogApp')
         };
 
         function getPaginatedEntries(itemsPerPage, pageNumber) {
+            loadingSpinnerService.showLoader();
             return $http.get('http://www.roblouie.com/blogengine/wp-json/posts?filter[posts_per_page]=' + itemsPerPage + '&page=' + pageNumber + '&fields=ID,title,excerpt,featured_image,date,slug&custom_fields=colspan,rowspan');
         }
 
         function getLifeEntries(itemsPerPage, pageNumber) {
+            loadingSpinnerService.showLoader();
             return $http.get('http://www.roblouie.com/blogengine/wp-json/posts?filter[posts_per_page]=' + itemsPerPage + '&page=' + pageNumber + '&fields=ID,title,excerpt,featured_image,date,slug&custom_fields=colspan,rowspan&filter[category_name]=life');
         }
 
         function getCodeEntries(itemsPerPage, pageNumber) {
+            loadingSpinnerService.showLoader();
             return $http.get('http://www.roblouie.com/blogengine/wp-json/posts?filter[posts_per_page]=' + itemsPerPage + '&page=' + pageNumber + '&fields=ID,title,excerpt,featured_image,date,slug&custom_fields=colspan,rowspan&filter[category_name]=code');
         }
 
         function getEntry(id) {
+            loadingSpinnerService.showLoader();
             return $http.get('http://www.roblouie.com/blogengine/wp-json/posts/' + id);
         }
 });

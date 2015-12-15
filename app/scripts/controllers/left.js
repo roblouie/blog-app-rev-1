@@ -8,11 +8,8 @@
  * Controller of the blogApp
  */
 angular.module('blogApp')
-  .controller('LeftCtrl', function ($scope, $mdSidenav, $log) {
+  .controller('LeftCtrl', function ($scope, $mdSidenav) {
         $scope.close = function () {
-            $mdSidenav('left').close()
-                .then(function () {
-                    $log.debug("close LEFT is done");
-                });
+            $mdSidenav('left').close();
         };
   });

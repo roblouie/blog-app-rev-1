@@ -1,7 +1,8 @@
 'use strict';
 
 angular.module('blogApp')
-  .controller('ArticleCtrl', function ($scope, DataPrepService, $routeParams, $mdUtil, $mdSidenav, $log) {
+  .controller('ArticleCtrl', function ($scope, DataPrepService, $routeParams, $mdUtil, $mdSidenav, loadingSpinnerService) {
+        loadingSpinnerService.hideLoader();
         $scope.toggleLeft = buildToggler('left');
 
         $scope.entry = DataPrepService.data;
@@ -18,10 +19,7 @@ angular.module('blogApp')
         function buildToggler(navID) {
             var debounceFn =  $mdUtil.debounce(function(){
                 $mdSidenav(navID)
-                    .toggle()
-                    .then(function () {
-                        $log.debug("toggle " + navID + " is done");
-                    });
+                    .toggle();
             },200);
             return debounceFn;
         }

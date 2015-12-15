@@ -22,15 +22,7 @@ angular.module('blogApp')
           scope.twoColumnData = [];
           scope.threeColumnData = [];
 
-          //scope.$watch(function() { return $mdMedia('min-width: 2600px'); }, function(isLargest) {
-          //    if (rawData !== undefined && isLargest) {
-          //        numberOfColumns = 4;
-          //        scope.content = rowize(rawData, numberOfColumns);
-          //        scope.flexSize = scope.content.length;
-          //    }
-          //});
-
-          scope.$watch(function() { return $mdMedia('(min-width: 1400px) and (max-width: 2600px)'); }, function(isLarge) {
+          scope.$watch(function() { return $mdMedia('min-width: 1400px'); }, function(isLarge) {
               if (rawData !== undefined && isLarge) {
                   numberOfColumns = 3;
                   scope.threeColumnData = rowize(rawData, numberOfColumns);

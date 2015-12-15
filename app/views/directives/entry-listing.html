@@ -33,7 +33,7 @@
         </md-card>
     </div>
 
-    <div ng-repeat="column in oneColumnData" flex>
+    <div ng-repeat="column in oneColumnData" flex class="one-column-data">
         <md-card ng-repeat="entry in column" class="entry-listing-card" ng-animate-ref="listing-one-{{entry.ID}}">
             <a href="/#!/article/{{entry.ID}}/{{entry.slug}}" class="non-decorated-link">
                 <img ng-if="entry.featured_image" ng-src="{{entry.featured_image.attachment_meta.sizes.medium ? entry.featured_image.attachment_meta.sizes.medium.url : entry.featured_image.source}}" class="md-card-image" alt="image caption">
