@@ -8,6 +8,7 @@
  * Controller of the blogApp
  */
 angular.module('blogApp')
-  .controller('LifeCtrl', function (DataPrepService) {
+  .controller('LifeCtrl', function (DataPrepService, loadingSpinnerService) {
+        loadingSpinnerService.hideLoader();
         this.rawData = DataPrepService.data;
   });
