@@ -15,7 +15,12 @@ angular.module('blogApp')
                 element.html(scope.html);
 
                 var codeWrappers = element.find('pre');
-                if (codeWrappers.length) Prism.highlightAll();
+                if (codeWrappers.length) {
+                  Prism.highlightAll();
+                  angular.forEach(codeWrappers.children(), function(codeElement, index) {
+                    codeWrappers[index].style.maxWidth = codeElement.offsetWidth <= 760 ? "750px" : codeElement.offsetWidth + "px";
+                  });
+                }
             }
         }
     });
