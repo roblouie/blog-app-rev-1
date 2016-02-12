@@ -35,6 +35,10 @@ md-icon {
   color: inherit;
 }
 
+#main-view-wrapper {
+  width: 100%;
+}
+
 .main-view {
   background-color: $content-background-color;
 }
@@ -87,6 +91,7 @@ figcaption {
   background-color: $content-background-color;
   padding: 0 8px;
   max-width: 1600px;
+  flex-shrink: 0;
 }
 
 .entry-listing-card {
@@ -292,6 +297,10 @@ md-sidenav#left-nav.md-locked-open {
   #loading-spinner {
     margin-left: -128px;
   }
+
+  #main-view-wrapper {
+    width: calc(100% - 256px);
+  }
 }
 
 .facebook-link {
@@ -356,6 +365,7 @@ md-sidenav#left-nav.md-locked-open {
   p {
     letter-spacing: 0.020em;
     line-height: 28px;
+    padding: 16px;
   }
 
   .article-card-content {
@@ -365,6 +375,41 @@ md-sidenav#left-nav.md-locked-open {
   .content-background {
     background-color: $content-background-color;
     padding: 0 0;
+  }
+
+  h1.article-headline {
+    font-size: 35px;
+    line-height: 50px;
+    padding: 16px;
+  }
+
+  h3 {
+    padding: 16px;
+  }
+
+  #main-listing-background {
+    padding: 0;
+  }
+
+  md-card.article-card {
+    padding: 0;
+    margin: 0;
+  }
+
+  #disqus_thread {
+    padding: 0 16px;
+  }
+
+  .detail-article-date {
+    padding-left: 16px;
+  }
+
+  .article-summary p {
+    padding: 0;
+  }
+
+  #article-content pre[class*="language-"] {
+    border-radius: 0;
   }
 }
 
