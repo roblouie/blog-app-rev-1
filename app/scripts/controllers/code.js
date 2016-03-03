@@ -8,7 +8,9 @@
  * Controller of the blogApp
  */
 angular.module('blogApp')
-  .controller('CodeCtrl', function (DataPrepService, loadingSpinnerService) {
-        loadingSpinnerService.hideLoader();
-        this.rawData = DataPrepService.data;
+  .controller('CodeCtrl', function (DataPrepService, loadingSpinnerService, metaService) {
+    document.title = 'Rob Louie - Coding';
+    metaService.setMetaContent("Coding related articles.");
+    loadingSpinnerService.hideLoader();
+    this.rawData = DataPrepService.data;
   });
