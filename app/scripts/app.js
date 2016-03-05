@@ -10,7 +10,7 @@ angular
         'ngAnimate'
     ])
     .config(function ($routeProvider, $locationProvider) {
-        $locationProvider.hashPrefix('!');
+        $locationProvider.html5Mode(true).hashPrefix('!');
         $routeProvider
             .when('/', {
                 templateUrl: 'views/main.html',
