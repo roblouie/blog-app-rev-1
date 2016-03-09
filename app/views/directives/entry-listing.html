@@ -3,12 +3,12 @@
                animated elements when changing data format -->
     <div ng-repeat="column in threeColumnData" flex>
         <md-card ng-repeat="entry in column" class="entry-listing-card" ng-animate-ref="listing-three-{{entry.ID}}">
-            <a href="/#!/article/{{entry.ID}}/{{entry.slug}}" class="non-decorated-link">
+            <a href="/article/{{entry.ID}}/{{entry.slug}}" class="non-decorated-link">
                 <img ng-if="entry.featured_image" ng-src="{{entry.featured_image.attachment_meta.sizes.medium ? entry.featured_image.attachment_meta.sizes.medium.url : entry.featured_image.source}}" class="md-card-image" alt="image caption">
             </a>
 
             <md-card-content>
-                <a href="/#!/article/{{entry.ID}}/{{entry.slug}}" class="non-decorated-link">
+                <a href="/article/{{entry.ID}}/{{entry.slug}}" class="non-decorated-link">
                     <h3 class="md-display-1">{{entry.title}}</h3>
                 </a>
                 <div class="article-date">{{entry.date | date : 'longDate'}}</div>
@@ -19,12 +19,12 @@
 
     <div ng-repeat="column in twoColumnData" flex>
         <md-card ng-repeat="entry in column" class="entry-listing-card" ng-animate-ref="listing-two-{{entry.ID}}">
-            <a href="/#!/article/{{entry.ID}}/{{entry.slug}}" class="non-decorated-link">
+            <a href="/article/{{entry.ID}}/{{entry.slug}}" class="non-decorated-link">
                 <img ng-if="entry.featured_image" ng-src="{{entry.featured_image.attachment_meta.sizes.medium ? entry.featured_image.attachment_meta.sizes.medium.url : entry.featured_image.source}}" class="md-card-image" alt="image caption">
             </a>
 
             <md-card-content>
-                <a href="/#!/article/{{entry.ID}}/{{entry.slug}}" class="non-decorated-link">
+                <a href="/article/{{entry.ID}}/{{entry.slug}}" class="non-decorated-link">
                     <h3 class="md-display-1">{{entry.title}}</h3>
                 </a>
                 <div class="article-date">{{entry.date | date : 'longDate'}}</div>
@@ -35,12 +35,12 @@
 
     <div ng-repeat="column in oneColumnData" flex class="one-column-data">
         <md-card ng-repeat="entry in column" class="entry-listing-card" ng-animate-ref="listing-one-{{entry.ID}}">
-            <a href="/#!/article/{{entry.ID}}/{{entry.slug}}" class="non-decorated-link">
+            <a href="/article/{{entry.ID}}/{{entry.slug}}" class="non-decorated-link">
                 <img ng-if="entry.featured_image" ng-src="{{entry.featured_image.attachment_meta.sizes.medium ? entry.featured_image.attachment_meta.sizes.medium.url : entry.featured_image.source}}" class="md-card-image" alt="image caption">
             </a>
 
             <md-card-content>
-                <a href="/#!/article/{{entry.ID}}/{{entry.slug}}" class="non-decorated-link">
+                <a href="/article/{{entry.ID}}/{{entry.slug}}" class="non-decorated-link">
                     <h3 class="md-display-1">{{entry.title}}</h3>
                 </a>
                 <div class="article-date">{{entry.date | date : 'longDate'}}</div>
