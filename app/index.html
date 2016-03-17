@@ -6,7 +6,6 @@
     <title>Rob Louie - Coding // Life</title>
     <blog-meta></blog-meta>
     <meta name="viewport" content="width=device-width">
-    <meta name="fragment" content="!" />
     <base href="/"/>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css styles/vendor.css -->
@@ -78,6 +77,7 @@
     <script src="scripts/services/loading-spinner-service.js"></script>
     <script src="scripts/directives/blog-meta.js"></script>
     <script src="scripts/services/meta-service.js"></script>
+    <script src="scripts/directives/share-post.js"></script>
     <!-- endbuild -->
 
     <script>
@@ -89,6 +89,23 @@
       ga('create', 'UA-74881006-1', 'auto');
       ga('send', 'pageview');
 
+    </script>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1741516022751595',
+          xfbml      : true,
+          version    : 'v2.5'
+        });
+      };
+
+      (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
     </script>
 </body>
 </html>

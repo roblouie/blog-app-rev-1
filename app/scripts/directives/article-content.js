@@ -1,11 +1,5 @@
 'use strict';
 
-/**
- * @ngdoc directive
- * @name blogApp.directive:articleContent
- * @description
- * # articleContent
- */
 angular.module('blogApp')
     .directive('articleContent', function () {
         return {
