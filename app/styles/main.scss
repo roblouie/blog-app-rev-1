@@ -7,6 +7,7 @@ $content-background-color: #e7e7e7;
 $reddit-color: #FF4500;
 $facebook-color: #3b5998;
 $twitter-color: #4099FF;
+$linkedin-color: #0077B5;
 
 $article-max-width: 750px;
 
@@ -65,6 +66,10 @@ figcaption {
 
 .featured-image {
   max-width: 750px;
+}
+
+.article-card-content {
+  padding: 0 16px;
 }
 
 #side-nav-top-content {
@@ -320,6 +325,30 @@ md-sidenav#left-nav.md-locked-open {
   color: white;
 }
 
+share-post {
+  display: block;
+  margin-top: 20px;
+  margin-left: -5px;
+}
+
+.share-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 35px;
+}
+
+.facebook-share {
+  color: $facebook-color;
+}
+
+.twitter-share {
+  color: $twitter-color;
+}
+
+.linkedin-share {
+  color: $linkedin-color;
+}
+
 .side-nav-bottom {
   perspective: 1000px;
   position: absolute;
@@ -370,7 +399,7 @@ md-sidenav#left-nav.md-locked-open {
   p {
     letter-spacing: 0.020em;
     line-height: 28px;
-    padding: 16px;
+    padding: 8px 16px;
   }
 
   .article-card-content {
@@ -385,7 +414,7 @@ md-sidenav#left-nav.md-locked-open {
   h1.article-headline {
     font-size: 35px;
     line-height: 50px;
-    padding: 16px;
+    padding: 8px 16px 0 16px;
   }
 
   h2 {
@@ -398,6 +427,10 @@ md-sidenav#left-nav.md-locked-open {
 
   #main-listing-background {
     padding: 0;
+  }
+
+  share-post {
+    margin-left: 11px;
   }
 
   md-card.article-card {
@@ -453,7 +486,7 @@ md-sidenav#left-nav.md-locked-open {
 }
 
 #article-content {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .article-summary p {
@@ -495,7 +528,7 @@ md-sidenav#left-nav.md-locked-open {
 
 //Comment section
 #disqus_thread {
-  margin-top: 50px;
+  margin-top: 30px;
   max-width: $article-max-width;
 }
 //End comment section

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--<link rel="stylesheet" href="angular-material.css">-->
+
+  <!--<link rel="stylesheet" href="prism.css">-->
+  <link rel="stylesheet" href="../styles/76b5ba1b.main.css">
+</head>
+<body class="layout-row">
+<md-backdrop id="menu-backdrop" class="md-sidenav-backdrop md-opaque ng-scope" style="display: none;"></md-backdrop>
+
+<md-sidenav id="left-nav" class="md-sidenav-left md-whiteframe-z2 md-locked-open" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')" tabindex="-1"><md-content id="side-nav-top-content" ng-controller="LeftCtrl" class="ng-scope"><button class="md-button md-ink-ripple hide-gt-md" type="button" ng-transclude="" id="side-nav-close-button" hide-gt-md="" aria-label="Close" ng-click="close()"><md-icon id="menu-close-button" md-svg-icon="images/icons/close.svg" class="ng-scope ng-isolate-scope" aria-hidden="true"><svg height="100%" viewBox="0 0 24 24" width="100%" xmlns="http://www.w3.org/2000/svg" fit="" preserveAspectRatio="xMidYMid meet" style="pointer-events: none; display: block;">
+  <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+  <path d="M0 0h24v24H0z" fill="none"></path>
+</svg></md-icon></button><a href="/" class="non-decorated-link site-title-link" data-unsp-sanitized="clean"><h2 class="md-display-1 site-title" data-unsp-sanitized="clean">Rob<span>Louie</span></h2></a> <a ng-click="close()" href="/" class="non-decorated-link filter-button" data-unsp-sanitized="clean">Home</a> <a ng-click="close()" href="/code" class="non-decorated-link filter-button" data-unsp-sanitized="clean">Coding</a> <a ng-click="close()" href="/life" class="non-decorated-link filter-button" data-unsp-sanitized="clean">Life</a> <!-- TODO: Add about section --> <!--<a href="#!/about" class="non-decorated-link"><p class="filter-button">About</p></a>--></md-content><div id="share-icon-box" layout="row" layout-align="center" class="side-nav-bottom layout-align-center layout-row"><a class="social-media-link" target="_blank" href="https://www.facebook.com/rob.louie" data-unsp-sanitized="clean"><md-icon class="facebook-link social-media-icon ng-isolate-scope" md-svg-src="images/icons/facebook.svg" aria-label="facebook" aria-hidden="true"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 96.124 96.123" style="pointer-events: none; display: block;" xml:space="preserve" fit="" preserveAspectRatio="xMidYMid meet">
+<g>
+	<path d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803
+		c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654
+		c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246
+		c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"></path>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg></md-icon></a> <a class="social-media-link" target="_blank" href="https://www.linkedin.com/in/roblouie" data-unsp-sanitized="clean"><md-icon class="linkedin-link social-media-icon ng-isolate-scope" md-svg-src="images/icons/linkedin_white.svg" aria-label="linkedin" aria-hidden="true"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 430.117 430.117" style="pointer-events: none; display: block;" xml:space="preserve" fit="" preserveAspectRatio="xMidYMid meet">
+<g>
+	<path id="LinkedIn" d="M430.117,261.543V420.56h-92.188V272.193c0-37.271-13.334-62.707-46.703-62.707
+		c-25.473,0-40.632,17.142-47.301,33.724c-2.432,5.928-3.058,14.179-3.058,22.477V420.56h-92.219c0,0,1.242-251.285,0-277.32h92.21
+		v39.309c-0.187,0.294-0.43,0.611-0.606,0.896h0.606v-0.896c12.251-18.869,34.13-45.824,83.102-45.824
+		C384.633,136.724,430.117,176.361,430.117,261.543z M52.183,9.558C20.635,9.558,0,30.251,0,57.463
+		c0,26.619,20.038,47.94,50.959,47.94h0.616c32.159,0,52.159-21.317,52.159-47.94C103.128,30.251,83.734,9.558,52.183,9.558z
+		 M5.477,420.56h92.184v-277.32H5.477V420.56z" fill="white"></path>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg></md-icon></a> <a class="social-media-link" target="_blank" href="https://www.twitter.com/rob_louie" data-unsp-sanitized="clean"><md-icon class="twitter-link social-media-icon ng-isolate-scope" md-svg-src="images/icons/twitter.svg" aria-label="twitter" aria-hidden="true"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 612 612" style="pointer-events: none; display: block;" xml:space="preserve" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet">
+<g>
+	<g>
+		<path d="M612,116.258c-22.525,9.981-46.694,16.75-72.088,19.772c25.929-15.527,45.777-40.155,55.184-69.411
+			c-24.322,14.379-51.169,24.82-79.775,30.48c-22.907-24.437-55.49-39.658-91.63-39.658c-69.334,0-125.551,56.217-125.551,125.513
+			c0,9.828,1.109,19.427,3.251,28.606C197.065,206.32,104.556,156.337,42.641,80.386c-10.823,18.51-16.98,40.078-16.98,63.101
+			c0,43.559,22.181,81.993,55.835,104.479c-20.575-0.688-39.926-6.348-56.867-15.756v1.568c0,60.806,43.291,111.554,100.693,123.104
+			c-10.517,2.83-21.607,4.398-33.08,4.398c-8.107,0-15.947-0.803-23.634-2.333c15.985,49.907,62.336,86.199,117.253,87.194
+			c-42.947,33.654-97.099,53.655-155.916,53.655c-10.134,0-20.116-0.612-29.944-1.721c55.567,35.681,121.536,56.485,192.438,56.485
+			c230.948,0,357.188-191.291,357.188-357.188l-0.421-16.253C573.872,163.526,595.211,141.422,612,116.258z"></path>
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg></md-icon></a></div></md-sidenav>
+
+<div id="main-view-wrapper" class="layout-column flex" role="main">
+  <md-toolbar class="header-bar hide-gt-md" hide-gt-md=""><div class="md-toolbar-tools"><div layout="row" flex="" class="fill-height layout-row flex"><a href="/" class="home-link" data-unsp-sanitized="clean"><h2 class="md-display-1 site-title" data-unsp-sanitized="clean">Rob<span>Louie</span></h2></a> <span flex="" class="flex"></span><div id="menu-button" class="md-toolbar-item docs-tools layout-row" layout="row"><button class="md-icon-button md-button md-ink-ripple" type="button" ng-transclude="" aria-label="Settings" ng-click="toggleLeft()"><md-icon class="menu-icon ng-scope ng-isolate-scope" md-svg-icon="images/icons/menu.svg" aria-hidden="true"><svg height="100%" viewBox="0 0 24 24" width="100%" xmlns="http://www.w3.org/2000/svg" fit="" preserveAspectRatio="xMidYMid meet" style="pointer-events: none; display: block;">
+    <path d="M0 0h24v24H0z" fill="none"></path>
+    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+  </svg></md-icon></button></div></div></div></md-toolbar>
+    <md-content id="main-listing-background" class="md-padding layout-column layout-padding ng-scope flex">
+      <md-card class="article-card" ng-animate-ref="article-card-198">
+        <md-card-content class="article-card-content">
+          <h1 class="article-headline md-display-2 ng-binding" data-unsp-sanitized="clean">Using Gestures Hold, Double Tap, and more in the Ionic 2 Beta</h1>
+          <div class="detail-article-date article-date ng-binding">March 26, 2016</div>
+          <share-post entry-to-share="entry" url-to-share="http://www.roblouie.com/article/198/using-gestures-in-the-ionic-2-beta" class="ng-isolate-scope"><a href="" ng-click="shareFacebook()" data-unsp-sanitized="clean"><md-icon class="facebook-share share-icon ng-isolate-scope" md-svg-src="images/icons/facebook.svg" aria-label="facebook" aria-hidden="true"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 96.124 96.123" style="pointer-events: none; display: block;" xml:space="preserve" fit="" preserveAspectRatio="xMidYMid meet">
+<g>
+	<path d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803
+		c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654
+		c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246
+		c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"></path>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg></md-icon></a> <a href="" ng-click="shareLinkedIn()" data-unsp-sanitized="clean"><md-icon class="linkedin-share share-icon ng-isolate-scope" md-svg-src="images/icons/linkedin.svg" aria-label="linkedin" aria-hidden="true"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 430.117 430.117" style="pointer-events: none; display: block;" xml:space="preserve" fit="" preserveAspectRatio="xMidYMid meet">
+<g>
+	<path id="LinkedIn" d="M430.117,261.543V420.56h-92.188V272.193c0-37.271-13.334-62.707-46.703-62.707
+		c-25.473,0-40.632,17.142-47.301,33.724c-2.432,5.928-3.058,14.179-3.058,22.477V420.56h-92.219c0,0,1.242-251.285,0-277.32h92.21
+		v39.309c-0.187,0.294-0.43,0.611-0.606,0.896h0.606v-0.896c12.251-18.869,34.13-45.824,83.102-45.824
+		C384.633,136.724,430.117,176.361,430.117,261.543z M52.183,9.558C20.635,9.558,0,30.251,0,57.463
+		c0,26.619,20.038,47.94,50.959,47.94h0.616c32.159,0,52.159-21.317,52.159-47.94C103.128,30.251,83.734,9.558,52.183,9.558z
+		 M5.477,420.56h92.184v-277.32H5.477V420.56z"></path>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg></md-icon></a> <a href="" ng-click="shareTwitter()" data-unsp-sanitized="clean"><md-icon class="twitter-share share-icon ng-isolate-scope" md-svg-src="images/icons/twitter.svg" aria-label="twitter" aria-hidden="true"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 612 612" style="pointer-events: none; display: block;" xml:space="preserve" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet">
+<g>
+	<g>
+		<path d="M612,116.258c-22.525,9.981-46.694,16.75-72.088,19.772c25.929-15.527,45.777-40.155,55.184-69.411
+			c-24.322,14.379-51.169,24.82-79.775,30.48c-22.907-24.437-55.49-39.658-91.63-39.658c-69.334,0-125.551,56.217-125.551,125.513
+			c0,9.828,1.109,19.427,3.251,28.606C197.065,206.32,104.556,156.337,42.641,80.386c-10.823,18.51-16.98,40.078-16.98,63.101
+			c0,43.559,22.181,81.993,55.835,104.479c-20.575-0.688-39.926-6.348-56.867-15.756v1.568c0,60.806,43.291,111.554,100.693,123.104
+			c-10.517,2.83-21.607,4.398-33.08,4.398c-8.107,0-15.947-0.803-23.634-2.333c15.985,49.907,62.336,86.199,117.253,87.194
+			c-42.947,33.654-97.099,53.655-155.916,53.655c-10.134,0-20.116-0.612-29.944-1.721c55.567,35.681,121.536,56.485,192.438,56.485
+			c230.948,0,357.188-191.291,357.188-357.188l-0.421-16.253C573.872,163.526,595.211,141.422,612,116.258z"></path>
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg></md-icon></a></share-post>
+          <div id="article-content" article-content="" html="entry.content" class="ng-isolate-scope">
+  <p>At the time of this writing, Angular 2 and Ionic 2 are both still in beta. This means there could still be bugs, missing features, and lacking documentation. One area I initially got stuck on was gestures in Ionic 2. In Ionic 1 they were quite simple, but in Ionic 2 they didn&#8217;t even seem to exist. They do exist, and here&#8217;s how to use them.</p><p>Ionic 2 makes use of the popular <a href="http://hammerjs.github.io/" target="_blank">hammerjs</a> library to handle it&#8217;s gestures. They&#8217;ve also built their own Gesture class that effectively acts as a wrapper to hammerjs: <a href="https://github.com/driftyco/ionic/blob/2.0/ionic/gestures/gesture.ts" target="_blank">Gesture.ts</a>.  Digging into the Ionic 2 source a bit more I found a good example of how to use the Gesture class in the <a href="https://github.com/driftyco/ionic/blob/2.0/ionic/components/slides/slides.ts" target="_blank">Slides component</a>.  The slides allow pinch zoom by making use of a Gesture, so I used this as a blueprint for my own simple press directive.</p>
+  <p>This concept should work for any gesture supported by hammerjs, in this case I wanted to capture a long press, a gesture referred to by hammerjs as simply <a href="http://hammerjs.github.io/recognizer-press/" target="_blank">press</a>.  We&#8217;re going to create a simple <a href="https://angular.io/docs/ts/latest/guide/attribute-directives.html" target="_blank">attribute directive</a> that you can apply to any element.  In our example we simply log out &#8220;pressed!!&#8221; to the console after a long press by the user.</p>
+  <p>Here&#8217;s the directive:</p>
+  <pre class="language-javascript"><code>import {Directive, ElementRef, Input, OnInit, OnDestroy} from 'angular2/core';
+   import {Gesture} from 'ionic-angular/gestures/gesture';
+
+   @Directive({
+     selector: '[longPress]'
+   })
+   export class PressDirective implements OnInit, OnDestroy {
+     el: HTMLElement;
+     pressGesture: Gesture;
+
+     constructor(el: ElementRef) {
+       this.el = el.nativeElement;
+     }
+
+     ngOnInit() {
+       this.pressGesture = new Gesture(this.el);
+       this.pressGesture.listen();
+       this.pressGesture.on('press', e =&gt; {
+         console.log('pressed!!');
+       })
+     }
+
+     ngOnDestroy() {
+       this.pressGesture.destroy();
+     }
+   }
+   </code></pre>
+  <p>Let&#8217;s see what&#8217;s happening here.  This is largely a regular attribute directive created following the official Angular 2 documentation, but notice at the top we also import Gesture from ionic-angular.</p>
+  <p>Then in ngOnInit, which runs automatically when the app starts as long as your class implements OnInit, we set up our pressGesture.  First we set pressGesture to a new Gesture, and pass the element to Gesture in it&#8217;s constructor.  We now tell pressGesture to start listening for events.</p>
+  <p>Since pressGesture is now listening for events, we can now tell it what to do when any event defined by hammerjs occurs.  In this case, if the user long presses, we log a message to the console.</p>
+  <p>Usage is as simple as adding the directive to your page:</p>
+  <pre class="language-javascript"><code>import {Page, NavController} from 'ionic-angular';
+   import {OnInit} from 'angular2/core';
+   import {AlarmService} from './alarm.service';
+   import {Page3} from "../page3/page3";
+   import {PressDirective} from './press.gesture.directive';
+
+   @Page({
+     templateUrl: 'build/pages/page1/page1.html',
+     providers: [AlarmService],
+     directives: [PressDirective]
+   })</code></pre>
+  <p>And then adding the attribute defined as the directive selector to any element:</p>
+  <pre class="language-markup"><code>&lt;ion-navbar *navbar&gt;
+     &lt;ion-title&gt;Alarms&lt;/ion-title&gt;
+   &lt;/ion-navbar&gt;
+
+   &lt;ion-content class="page1" longPress&gt;</code></pre>
+  <p>&nbsp;</p>
+  <p><em><strong>Edit:  </strong>A great question was asked in the comments section, how can you adjust the time you have to press.  Here&#8217;s the answer.</em></p>
+  <p>Hammerjs has multiple &#8220;recognizers&#8221;.  One for press, one for tap, etc (see their docs for more info).  You can set options for Hammerjs, and within those options set additional options for each recognizer.  Ionic&#8217;s Gesture class also takes options and passes them directly along to Hammerjs.  So to change the time for press you must update the Gesture instantiation with options for the Press gesture.  Here&#8217;s what my ngOnInit function looks like now in press.gesture.directive.ts</p>
+  <pre class="language-javascript"><code>ngOnInit() {
+     this.pressGesture = new Gesture(this.el, {
+       recognizers: [
+         [Hammer.Press, {time: 6000}]
+       ]
+     });
+     this.pressGesture.listen();
+     this.pressGesture.on('press', e =&gt; {
+       console.log('pressed!!');
+     });
+   }</code></pre>
+  <p>You can see that I pass in options, and one of those options is recognizers. That option takes an array of arrays, where each child array is a recognizer and another options set.  Here I set the press option&#8217;s time property to 6000ms, or 10 seconds.</p>
+  <p>Detecting a double tap is equally simple, here is ngOnInit for double tap detection:</p>
+  <pre class="language-javascript"><code>ngOnInit() {
+     this.pressGesture = new Gesture(this.el, {
+       recognizers: [
+         [Hammer.Tap, {taps: 2}]
+       ]
+     });
+     this.pressGesture.listen();
+     this.pressGesture.on('tap', e =&gt; {
+       console.log('pressed!!');
+     });
+   }</code></pre>
+  <p>Have any ideas how to make this better?  Questions? Let me know in the comments below.</p>
+            </div>
+          </md-card-content>
+        </md-card>
+</md-content>
+</div>
+<link href="https://fonts.googleapis.com/css?family=Raleway:400,300,800,600" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic" rel="stylesheet" type="text/css">
+<script src="prism.js"></script>
+
+<script>
+  window.onload = function() {
+    var leftNav = document.querySelector('#left-nav');
+    var menuButton = document.querySelector('#menu-button');
+    var menuBackdrop = document.querySelector('#menu-backdrop');
+    var menuCloseButton = document.querySelector('#side-nav-close-button');
+    var isMenuOpen;
+
+    menuBackdrop.onclick = toggleMenu;
+    menuButton.onclick = toggleMenu;
+    menuCloseButton.onclick = toggleMenu;
+
+    function toggleMenu() {
+      if (isMenuOpen) {
+        isMenuOpen = false;
+
+        leftNav.className = "md-sidenav-left md-whiteframe-z2 md-closed md-closed-add";
+        window.setTimeout(function() {
+          leftNav.className = "md-sidenav-left md-whiteframe-z2 md-closed";
+        }, 200);
+
+        menuBackdrop.setAttribute('style', "display: none");
+      } else {
+        isMenuOpen = true;
+        leftNav.className = "md-sidenav-left md-whiteframe-z2 md-closed md-closed-remove";
+        window.setTimeout(function() {
+          leftNav.className = "md-sidenav-left md-whiteframe-z2 md-closed-remove";
+        }, 1);
+        menuBackdrop.setAttribute('style', "display: block; background-color: rgba(33,33,33,1.0);");
+      }
+    }
+
+
+    var previousSize = window.innerWidth;
+    var currentSizeType = window.innerWidth < 960? 'small' : 'large';
+
+    function resize() {
+      if (window.innerWidth < 960 && window.innerWidth < previousSize && currentSizeType === 'large') {
+        previousSize = window.innerWidth;
+        currentSizeType = 'small';
+        console.log('made small');
+        leftNav.className = "md-sidenav-left md-whiteframe-z2 md-closed md-locked-open-remove md-locked-open-remove-active";
+
+        window.setTimeout(function() {
+          leftNav.className = "md-sidenav-left md-whiteframe-z2 md-closed";
+        }, 300);
+      }
+
+      if (window.innerWidth >= 960 && window.innerWidth > previousSize && currentSizeType === 'small') {
+        previousSize = window.innerWidth;
+        currentSizeType = 'large';
+        console.log('made large');
+        leftNav.className = "md-sidenav-left md-whiteframe-z2 md-closed md-locked-open-add";
+
+        window.setTimeout(function() {
+          leftNav.className = "md-sidenav-left md-whiteframe-z2 md-closed md-locked-open-add md-locked-open";
+          leftNav.className = "md-sidenav-left md-whiteframe-z2 md-locked-open";
+        }, 1);
+
+      }
+    }
+
+    window.onresize = resize;
+  }
+</script>
+</body>
+</html>
