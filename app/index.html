@@ -16,7 +16,25 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/libraries/prism.css">
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+
     <!-- endbuild -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1741516022751595',
+          xfbml      : true,
+          version    : 'v2.5'
+        });
+      };
+
+      (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
   </head>
   <body class="layout-row">
     <!--[if lt IE 7]>
@@ -31,31 +49,29 @@
       <loading-spinner></loading-spinner>
     </div>
 
+    <script async src="scripts/libraries/prism.js"></script>
 
-
-    <!--[if lt IE 9]>
-    <script src="bower_components/es5-shim/es5-shim.js"></script>
-    <script src="bower_components/json3/lib/json3.min.js"></script>
-    <![endif]-->
-
-    <script src="scripts/libraries/prism.js"></script>
-
-    <!-- font testing -->
+    <!-- fonts -->
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,800,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic' rel='stylesheet' type='text/css'>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/json3/lib/json3.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-aria/angular-aria.js"></script>
-    <script src="bower_components/angular-material/angular-material.js"></script>
     <!-- endbower -->
+    <script src="bower_components/angular-material/modules/js/button/button.js"></script>
+    <script src="bower_components/angular-material/modules/js/core/core.js"></script>
+    <script src="bower_components/angular-material/modules/js/card/card.js"></script>
+    <script src="bower_components/angular-material/modules/js/content/content.js"></script>
+    <script src="bower_components/angular-material/modules/js/menu/menu.js"></script>
+    <script src="bower_components/angular-material/modules/js/menuBar/menuBar.js"></script>
+    <script src="bower_components/angular-material/modules/js/sidenav/sidenav.js"></script>
+    <script src="bower_components/angular-material/modules/js/backdrop/backdrop.js"></script>
+    <script src="bower_components/angular-material/modules/js/icon/icon.js"></script>
+    <script src="bower_components/angular-material/modules/js/toolbar/toolbar.js"></script>
     <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
@@ -89,23 +105,6 @@
       ga('create', 'UA-74881006-1', 'auto');
       ga('send', 'pageview');
 
-    </script>
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId      : '1741516022751595',
-          xfbml      : true,
-          version    : 'v2.5'
-        });
-      };
-
-      (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
     </script>
 </body>
 </html>

@@ -2,11 +2,15 @@
 
 angular
     .module('blogApp', [
-        'ngCookies',
-        'ngResource',
-        'ngSanitize',
         'ngRoute',
-        'ngMaterial',
+        'material.core',
+        'material.components.backdrop',
+        'material.components.button',
+        'material.components.icon',
+        'material.components.sidenav',
+        'material.components.menuBar',
+        'material.components.card',
+        'material.components.content',
         'ngAnimate'
     ])
     .config(function ($routeProvider, $locationProvider) {
