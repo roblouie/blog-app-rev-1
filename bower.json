@@ -3,11 +3,6 @@
   "version": "0.0.0",
   "dependencies": {
     "angular": "1.5.0-beta.2",
-    "json3": "latest",
-    "es5-shim": "latest",
-    "angular-resource": "latest",
-    "angular-cookies": "latest",
-    "angular-sanitize": "latest",
     "angular-route": "latest",
     "angular-animate": "1.5.0-beta.2",
     "angular-material": "master"

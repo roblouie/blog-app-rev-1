@@ -188,6 +188,7 @@ module.exports = function (grunt) {
     // Automatically inject Bower components into the app
     bowerInstall: {
       app: {
+        exclude: ['<%= yeoman.app %>/bower_components/angular-material'],
         src: ['<%= yeoman.app %>/index.html'],
         ignorePath: '<%= yeoman.app %>/'
       },
@@ -271,6 +272,7 @@ module.exports = function (grunt) {
     // The following *-min tasks produce minified files in the dist folder
     cssmin: {
       options: {
+        keepSpecialComments: 0,
         root: '<%= yeoman.app %>'
       }
     },
